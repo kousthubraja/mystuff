@@ -1,0 +1,44 @@
+_NR_osf_gettimeofday	116
+#define __NR_osf_getrusage	117
+#define __NR_getsockopt		118
+
+#define __NR_readv		120
+#define __NR_writev		121
+#define __NR_osf_settimeofday	122
+#define __NR_fchown		123
+#define __NR_fchmod		124
+#define __NR_recvfrom		125
+#define __NR_setreuid		126
+#define __NR_setregid		127
+#define __NR_rename		128
+#define __NR_truncate		129
+#define __NR_ftruncate		130
+#define __NR_flock		131
+#define __NR_setgid		132
+#define __NR_sendto		133
+#define __NR_shutdown		134
+#define __NR_socketpair		135
+#define __NR_mkdir		136
+#define __NR_rmdir		137
+#define __NR_osf_utimes		138
+#define __NR_osf_old_sigreturn	139	/* not implemented */
+#define __NR_osf_adjtime	140	/* not implemented */
+#define __NR_getpeername	141
+#define __NR_osf_gethostid	142	/* not implemented */
+#define __NR_osf_sethostid	143	/* not implemented */
+#define __NR_getrlimit		144
+#define __NR_setrlimit		145
+#define __NR_osf_old_killpg	146	/* not implemented */
+#define __NR_setsid		147
+#define __NR_quotactl		148
+#define __NR_osf_oldquota	149	/* not implemented */
+#define __NR_getsockname	150
+
+#define __NR_osf_pid_block	153	/* not implemented */
+#define __NR_osf_pid_unblock	154	/* not implemented */
+
+#define __NR_sigaction		156
+#define __NR_osf_sigwaitprim	157	/* not implemented */
+#define __NR_osf_nfssvc		158	/* not implemented */
+#define __NR_osf_getdirentries	159
+#define __NR_osf_

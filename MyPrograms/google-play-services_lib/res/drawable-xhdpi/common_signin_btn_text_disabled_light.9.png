@@ -1,0 +1,79 @@
+#ifndef _ALPHA_PGTABLE_H
+#define _ALPHA_PGTABLE_H
+
+#include <asm-generic/4level-fixup.h>
+
+/*
+ * This file contains the functions and defines necessary to modify and use
+ * the Alpha page table tree.
+ *
+ * This hopefully works with any standard Alpha page-size, as defined
+ * in <asm/page.h> (currently 8192).
+ */
+#include <linux/mmzone.h>
+
+#include <asm/page.h>
+#include <asm/processor.h>	/* For TASK_SIZE */
+#include <asm/machvec.h>
+#include <asm/setup.h>
+
+struct mm_struct;
+struct vm_area_struct;
+
+/* Certain architectures need to do special things when PTEs
+ * within a page table are directly modified.  Thus, the following
+ * hook is made available.
+ */
+#define set_pte(pteptr, pteval) ((*(pteptr)) = (pteval))
+#define set_pte_at(mm,addr,ptep,pteval) set_pte(ptep,pteval)
+
+/* PMD_SHIFT determines the size of the area a second-level page table can map */
+#define PMD_SHIFT	(PAGE_SHIFT + (PAGE_SHIFT-3))
+#define PMD_SIZE	(1UL << PMD_SHIFT)
+#define PMD_MASK	(~(PMD_SIZE-1))
+
+/* PGDIR_SHIFT determines what a third-level page table entry can map */
+#define PGDIR_SHIFT	(PAGE_SHIFT + 2*(PAGE_SHIFT-3))
+#define PGDIR_SIZE	(1UL << PGDIR_SHIFT)
+#define PGDIR_MASK	(~(PGDIR_SIZE-1))
+
+/*
+ * Entries per page directory level:  the Alpha is three-level, with
+ * all levels having a one-page page table.
+ */
+#define PTRS_PER_PTE	(1UL << (PAGE_SHIFT-3))
+#define PTRS_PER_PMD	(1UL << (PAGE_SHIFT-3))
+#define PTRS_PER_PGD	(1UL << (PAGE_SHIFT-3))
+#define USER_PTRS_PER_PGD	(TASK_SIZE / PGDIR_SIZE)
+#define FIRST_USER_ADDRESS	0
+
+/* Number of pointers that fit on a page:  this will go away. */
+#define PTRS_PER_PAGE	(1UL << (PAGE_SHIFT-3))
+
+#ifdef CONFIG_ALPHA_LARGE_VMALLOC
+#define VMALLOC_START		0xfffffe0000000000
+#else
+#define VMALLOC_START		(-2*PGDIR_SIZE)
+#endif
+#define VMALLOC_END		(-PGDIR_SIZE)
+
+/*
+ * OSF/1 PAL-code-imposed page table bits
+ */
+#define _PAGE_VALID	0x0001
+#define _PAGE_FOR	0x0002	/* used for page protection (fault on read) */
+#define _PAGE_FOW	0x0004	/* used for page protection (fault on write) */
+#define _PAGE_FOE	0x0008	/* used for page protection (fault on exec) */
+#define _PAGE_ASM	0x0010
+#define _PAGE_KRE	0x0100	/* xxx - see below on the "accessed" bit */
+#define _PAGE_URE	0x0200	/* xxx */
+#define _PAGE_KWE	0x1000	/* used to do the dirty bit in software */
+#define _PAGE_UWE	0x2000	/* used to do the dirty bit in software */
+
+/* .. and these are ours ... */
+#define _PAGE_DIRTY	0x20000
+#define _PAGE_ACCESSED	0x40000
+#define _PAGE_FILE	0x80000	/* set:pagecache, unset:swap */
+
+/*
+ * NOTE! The "accessed" bit isn't necessarily exact:  it can be

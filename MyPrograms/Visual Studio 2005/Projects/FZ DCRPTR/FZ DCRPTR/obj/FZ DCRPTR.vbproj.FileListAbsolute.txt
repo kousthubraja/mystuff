@@ -1,0 +1,3 @@
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\FZ DCRPTR\FZ DCRPTR\obj\Debug\FZ DCRPTR.exe
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\FZ DCRPTR\FZ DCRPTR\obj\Debug\FZ DCRPTR.xml
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\FZ DCRPTR\FZ DCRPTR\obj\Debug\FZ DCRPTR.pdb

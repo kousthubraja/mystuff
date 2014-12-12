@@ -1,0 +1,28 @@
+/*
+ * Copyright (C) 2004, 2007-2010, 2011-2012 Synopsys, Inc. (www.synopsys.com)
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 as
+ * published by the Free Software Foundation.
+ */
+
+#ifndef _ASM_ARC_ARCREGS_H
+#define _ASM_ARC_ARCREGS_H
+
+#ifdef __KERNEL__
+
+/* Build Configuration Registers */
+#define ARC_REG_DCCMBASE_BCR	0x61	/* DCCM Base Addr */
+#define ARC_REG_CRC_BCR		0x62
+#define ARC_REG_DVFB_BCR	0x64
+#define ARC_REG_EXTARITH_BCR	0x65
+#define ARC_REG_VECBASE_BCR	0x68
+#define ARC_REG_PERIBASE_BCR	0x69
+#define ARC_REG_FP_BCR		0x6B	/* Single-Precision FPU */
+#define ARC_REG_DPFP_BCR	0x6C	/* Dbl Precision FPU */
+#define ARC_REG_DCCM_BCR	0x74	/* DCCM Present + SZ */
+#define ARC_REG_TIMERS_BCR	0x75
+#define ARC_REG_ICCM_BCR	0x78
+#define ARC_REG_XY_MEM_BCR	0x79
+#define ARC_REG_MAC_BCR		0x7a
+#define ARC_R

@@ -1,0 +1,133 @@
+ADDR + 0x8760001000UL + (n)*0x100 + (m)*0x40)
+
+/*
+ * Memory spaces:
+ */
+#define CIA_IACK_SC			(IDENT_ADDR + 0x8720000000UL)
+#define CIA_CONF			(IDENT_ADDR + 0x8700000000UL)
+#define CIA_IO				(IDENT_ADDR + 0x8580000000UL)
+#define CIA_SPARSE_MEM			(IDENT_ADDR + 0x8000000000UL)
+#define CIA_SPARSE_MEM_R2		(IDENT_ADDR + 0x8400000000UL)
+#define CIA_SPARSE_MEM_R3		(IDENT_ADDR + 0x8500000000UL)
+#define CIA_DENSE_MEM		        (IDENT_ADDR + 0x8600000000UL)
+#define CIA_BW_MEM			(IDENT_ADDR + 0x8800000000UL)
+#define CIA_BW_IO			(IDENT_ADDR + 0x8900000000UL)
+#define CIA_BW_CFG_0			(IDENT_ADDR + 0x8a00000000UL)
+#define CIA_BW_CFG_1			(IDENT_ADDR + 0x8b00000000UL)
+
+/*
+ * ALCOR's GRU ASIC registers
+ */
+#define GRU_INT_REQ			(IDENT_ADDR + 0x8780000000UL)
+#define GRU_INT_MASK			(IDENT_ADDR + 0x8780000040UL)
+#define GRU_INT_EDGE			(IDENT_ADDR + 0x8780000080UL)
+#define GRU_INT_HILO			(IDENT_ADDR + 0x87800000C0UL)
+#define GRU_INT_CLEAR			(IDENT_ADDR + 0x8780000100UL)
+
+#define GRU_CACHE_CNFG			(IDENT_ADDR + 0x8780000200UL)
+#define GRU_SCR				(IDENT_ADDR + 0x8780000300UL)
+#define GRU_LED				(IDENT_ADDR + 0x8780000800UL)
+#define GRU_RESET			(IDENT_ADDR + 0x8780000900UL)
+
+#define ALCOR_GRU_INT_REQ_BITS		0x800fffffUL
+#define XLT_GRU_INT_REQ_BITS		0x80003fffUL
+#define GRU_INT_REQ_BITS		(alpha_mv.sys.cia.gru_int_req_bits+0)
+
+/*
+ * PYXIS interrupt control registers
+ */
+#define PYXIS_INT_REQ			(IDENT_ADDR + 0x87A0000000UL)
+#define PYXIS_INT_MASK			(IDENT_ADDR + 0x87A0000040UL)
+#define PYXIS_INT_HILO			(IDENT_ADDR + 0x87A00000C0UL)
+#define PYXIS_INT_ROUTE			(IDENT_ADDR + 0x87A0000140UL)
+#define PYXIS_GPO			(IDENT_ADDR + 0x87A0000180UL)
+#define PYXIS_INT_CNFG			(IDENT_ADDR + 0x87A00001C0UL)
+#define PYXIS_RT_COUNT			(IDENT_ADDR + 0x87A0000200UL)
+#define PYXIS_INT_TIME			(IDENT_ADDR + 0x87A0000240UL)
+#define PYXIS_IIC_CTRL			(IDENT_ADDR + 0x87A00002C0UL)
+#define PYXIS_RESET			(IDENT_ADDR + 0x8780000900UL)
+
+/* Offset between ram physical addresses and pci64 DAC bus addresses.  */
+#define PYXIS_DAC_OFFSET		(1UL << 40)
+
+/*
+ * Data structure for handling CIA machine checks.
+ */
+
+/* System-specific info.  */
+struct el_CIA_sysdata_mcheck {
+	unsigned long	cpu_err0;
+	unsigned long	cpu_err1;
+	unsigned long	cia_err;
+	unsigned long	cia_stat;
+	unsigned long	err_mask;
+	unsigned long	cia_syn;
+	unsigned long	mem_err0;
+	unsigned long	mem_err1;
+	unsigned long	pci_err0;
+	unsigned long	pci_err1;
+	unsigned long	pci_err2;
+};
+
+
+#ifdef __KERNEL__
+
+#ifndef __EXTERN_INLINE
+/* Do not touch, this should *NOT* be static inline */
+#define __EXTERN_INLINE extern inline
+#define __IO_EXTERN_INLINE
+#endif
+
+/*
+ * I/O functions:
+ *
+ * CIA (the 2117x PCI/memory support chipset for the EV5 (21164)
+ * series of processors uses a sparse address mapping scheme to
+ * get at PCI memory and I/O.
+ */
+
+/*
+ * Memory functions.  64-bit and 32-bit accesses are done through
+ * dense memory space, everything else through sparse space.
+ *
+ * For reading and writing 8 and 16 bit quantities we need to
+ * go through one of the three sparse address mapping regions
+ * and use the HAE_MEM CSR to provide some bits of the address.
+ * The following few routines use only sparse address region 1
+ * which gives 1Gbyte of accessible space which relates exactly
+ * to the amount of PCI memory mapping *into* system address space.
+ * See p 6-17 of the specification but it looks something like this:
+ *
+ * 21164 Address:
+ *
+ *          3         2         1
+ * 9876543210987654321098765432109876543210
+ * 1ZZZZ0.PCI.QW.Address............BBLL
+ *
+ * ZZ = SBZ
+ * BB = Byte offset
+ * LL = Transfer length
+ *
+ * PCI Address:
+ *
+ * 3         2         1
+ * 10987654321098765432109876543210
+ * HHH....PCI.QW.Address........ 00
+ *
+ * HHH = 31:29 HAE_MEM CSR
+ *
+ */
+
+#define vip	volatile int __force *
+#define vuip	volatile unsigned int __force *
+#define vulp	volatile unsigned long __force *
+
+__EXTERN_INLINE unsigned int cia_ioread8(void __iomem *xaddr)
+{
+	unsigned long addr = (unsigned long) xaddr;
+	unsigned long result, base_and_type;
+
+	if (addr >= CIA_DENSE_MEM)
+		base_and_type = CIA_SPARSE_MEM + 0x00;
+	else
+		ba

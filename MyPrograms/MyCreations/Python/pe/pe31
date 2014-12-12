@@ -1,0 +1,12 @@
+t=0
+for a in range(0,3):
+    for b in range(0,5):
+        for c in range(0,11):
+            for d in range(0,21):
+                for e in range(0,41):
+                    for f in range(0,101):
+                        for g in range(0,201):
+                            if 100*a+50*b+20*c+10*d+5*e+2*f+1*g == 200:
+                                print(a,b,c,d,e,f,g)
+                                t=t+1
+                                break

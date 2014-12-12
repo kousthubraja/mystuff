@@ -1,0 +1,10 @@
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\ftp tester\ftp tester\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\ftp tester\ftp tester\obj\Debug\WindowsApplication1.Form1.resources
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\ftp tester\ftp tester\obj\Debug\WindowsApplication1.Resources.resources
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\ftp tester\ftp tester\obj\Debug\ftp tester.vbproj.GenerateResource.Cache
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\ftp tester\ftp tester\bin\Debug\ftp tester.exe
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\ftp tester\ftp tester\bin\Debug\ftp tester.pdb
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\ftp tester\ftp tester\bin\Debug\ftp tester.xml
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\ftp tester\ftp tester\obj\Debug\ftp tester.exe
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\ftp tester\ftp tester\obj\Debug\ftp tester.xml
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\ftp tester\ftp tester\obj\Debug\ftp tester.pdb

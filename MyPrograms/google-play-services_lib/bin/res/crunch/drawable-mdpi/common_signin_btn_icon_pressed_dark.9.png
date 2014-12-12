@@ -1,0 +1,60 @@
+\n\
+								\n\
+	ldq $31, 192($17)					\n\
+	ldq $31, 192($18)					\n\
+	ldq $31, 192($19)					\n\
+	.align 4						\n\
+3:								\n\
+	ldq $0,0($17)						\n\
+	ldq $1,0($18)						\n\
+	ldq $2,0($19)						\n\
+	ldq $3,8($17)						\n\
+								\n\
+	ldq $4,8($18)						\n\
+	ldq $6,16($17)						\n\
+	ldq $7,16($18)						\n\
+	ldq $21,24($17)						\n\
+								\n\
+	ldq $22,24($18)						\n\
+	ldq $24,32($17)						\n\
+	ldq $25,32($18)						\n\
+	ldq $5,8($19)						\n\
+								\n\
+	ldq $20,16($19)						\n\
+	ldq $23,24($19)						\n\
+	ldq $27,32($19)						\n\
+	nop							\n\
+								\n\
+	xor $0,$1,$1		# 8 cycles from $0 load		\n\
+	xor $3,$4,$4		# 7 cycles from $4 load		\n\
+	xor $6,$7,$7		# 6 cycles from $7 load		\n\
+	xor $21,$22,$22		# 5 cycles from $22 load	\n\
+								\n\
+	xor $1,$2,$2		# 9 cycles from $2 load		\n\
+	xor $24,$25,$25		# 5 cycles from $25 load	\n\
+	stq $2,0($17)						\n\
+	xor $4,$5,$5		# 6 cycles from $5 load		\n\
+								\n\
+	stq $5,8($17)						\n\
+	xor $7,$20,$20		# 7 cycles from $20 load	\n\
+	stq $20,16($17)						\n\
+	xor $22,$23,$23		# 7 cycles from $23 load	\n\
+								\n\
+	stq $23,24($17)						\n\
+	xor $25,$27,$27		# 7 cycles from $27 load	\n\
+	stq $27,32($17)						\n\
+	nop							\n\
+								\n\
+	ldq $0,40($17)						\n\
+	ldq $1,40($18)						\n\
+	ldq $3,48($17)						\n\
+	ldq $4,48($18)						\n\
+								\n\
+	ldq $6,56($17)						\n\
+	ldq $7,56($18)						\n\
+	ldq $2,40($19)						\n\
+	ldq $5,48($19)						\n\
+								\n\
+	ldq $20,56($19)						\n\
+	ldq $31,256($17)					\n\
+	ldq $3

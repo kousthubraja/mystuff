@@ -1,0 +1,8 @@
+def hyper_exp(a, b, m):
+    temp = 1
+    while b:
+        temp = pow(a, temp, 10**m)
+        b -= 1
+    return temp
+ 
+print("Answer to PE188 = ",hyper_exp(1777, 1855, 8))

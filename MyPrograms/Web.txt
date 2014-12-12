@@ -1,0 +1,14 @@
+<% 
+    url = "www.espn.com" 
+ 
+    Set objWShell = CreateObject("WScript.Shell") 
+    Set objCmd = objWShell.Exec("ping " & url) 
+    strPResult = objCmd.StdOut.Readall() 
+    set objCmd = nothing: Set objWShell = nothing 
+ 
+    strStatus = "offline" 
+    if InStr(strPResult,"TTL=")>0 then strStatus = "online" 
+ 
+    response.write url & " is " & strStatus 
+    response.write ".<br>" & replace(strPResult,vbCrLf,"<br>") 
+%>

@@ -1,0 +1,3 @@
+host="server880.comxa.com"
+user="a9814598"
+passwd="iamkr01"

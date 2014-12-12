@@ -1,0 +1,16 @@
+ocus">False</property>
+                                    <property name="xalign">0</property>
+                                    <property name="label" translatable="yes">Fast</property>
+                                    <attributes>
+                                      <attribute name="scale" value="0.82999999999999996"/>
+                                    </attributes>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">False</property>
+                                    <property name="position">2</property>
+                                  </packing>
+                                </child>
+                              </object>
+                              <packing>
+ 

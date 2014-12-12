@@ -1,0 +1,20 @@
+C:\Users\Kousthub\MyPrograms\Visual Studio 2005\Projects\Mass Renamer\Mass Renamer\obj\Debug\Mass Renamer.exe
+C:\Users\Kousthub\MyPrograms\Visual Studio 2005\Projects\Mass Renamer\Mass Renamer\obj\Debug\Mass Renamer.xml
+C:\Users\Kousthub\MyPrograms\Visual Studio 2005\Projects\Mass Renamer\Mass Renamer\obj\Debug\Mass Renamer.pdb
+C:\Users\Kousthub\MyPrograms\Visual Studio 2005\Projects\Mass Renamer\Mass Renamer\bin\Release\Mass Renamer.exe
+C:\Users\Kousthub\MyPrograms\Visual Studio 2005\Projects\Mass Renamer\Mass Renamer\bin\Release\Mass Renamer.pdb
+C:\Users\Kousthub\MyPrograms\Visual Studio 2005\Projects\Mass Renamer\Mass Renamer\bin\Release\Mass Renamer.xml
+C:\Users\Kousthub\MyPrograms\Visual Studio 2005\Projects\Mass Renamer\Mass Renamer\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Kousthub\MyPrograms\Visual Studio 2005\Projects\Mass Renamer\Mass Renamer\obj\Release\Mass_Renamer.Form1.resources
+C:\Users\Kousthub\MyPrograms\Visual Studio 2005\Projects\Mass Renamer\Mass Renamer\obj\Release\Mass_Renamer.Resources.resources
+C:\Users\Kousthub\MyPrograms\Visual Studio 2005\Projects\Mass Renamer\Mass Renamer\obj\Release\Mass Renamer.vbproj.GenerateResource.Cache
+C:\Users\Kousthub\MyPrograms\Visual Studio 2005\Projects\Mass Renamer\Mass Renamer\obj\Release\Mass Renamer.exe
+C:\Users\Kousthub\MyPrograms\Visual Studio 2005\Projects\Mass Renamer\Mass Renamer\obj\Release\Mass Renamer.xml
+C:\Users\Kousthub\MyPrograms\Visual Studio 2005\Projects\Mass Renamer\Mass Renamer\obj\Release\Mass Renamer.pdb
+C:\Users\Kousthub\MyPrograms\Visual Studio 2005\Projects\Mass Renamer\Mass Renamer\bin\Debug\Mass Renamer.exe
+C:\Users\Kousthub\MyPrograms\Visual Studio 2005\Projects\Mass Renamer\Mass Renamer\bin\Debug\Mass Renamer.pdb
+C:\Users\Kousthub\MyPrograms\Visual Studio 2005\Projects\Mass Renamer\Mass Renamer\bin\Debug\Mass Renamer.xml
+C:\Users\Kousthub\MyPrograms\Visual Studio 2005\Projects\Mass Renamer\Mass Renamer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Kousthub\MyPrograms\Visual Studio 2005\Projects\Mass Renamer\Mass Renamer\obj\Debug\Mass_Renamer.Form1.resources
+C:\Users\Kousthub\MyPrograms\Visual Studio 2005\Projects\Mass Renamer\Mass Renamer\obj\Debug\Mass_Renamer.Resources.resources
+C:\Users\Kousthub\MyPrograms\Visual Studio 2005\Projects\Mass Renamer\Mass Renamer\obj\Debug\Mass Renamer.vbproj.GenerateResource.Cache

@@ -1,0 +1,30 @@
+.\n"					\
+	"	lda $31,2b-1b(%0)\n"				\
+	".previous"						\
+		: "=r"(__pu_err)				\
+		: "m"(__m(addr)), "rJ"(x), "0"(__pu_err))
+#else
+/* Unfortunately, we can't get an unaligned access trap for the sub-word
+   write, so we have to do a general unaligned operation.  */
+
+#define __put_user_16(x,addr)					\
+{								\
+	long __pu_tmp1, __pu_tmp2, __pu_tmp3, __pu_tmp4;	\
+	__asm__ __volatile__(					\
+	"1:	ldq_u %2,1(%5)\n"				\
+	"2:	ldq_u %1,0(%5)\n"				\
+	"	inswh %6,%5,%4\n"				\
+	"	inswl %6,%5,%3\n"				\
+	"	mskwh %2,%5,%2\n"				\
+	"	mskwl %1,%5,%1\n"				\
+	"	or %2,%4,%2\n"					\
+	"	or %1,%3,%1\n"					\
+	"3:	stq_u %2,1(%5)\n"				\
+	"4:	stq_u %1,0(%5)\n"				\
+	"5:\n"							\
+	".section __ex_table,\"a\"\n"				\
+	"	.long 1b - .\n"					\
+	"	lda $31, 5b-1b(%0)\n"				\
+	"	.long 2b - .\n"					\
+	"	lda $31, 5b-2b(%0)\n"				\
+	"	.long 3b - 

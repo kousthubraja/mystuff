@@ -1,0 +1,8 @@
+MIDlet-1: Q,/q.png,Source.Q
+MIDlet-Jar-Size: 11420
+MIDlet-Jar-URL: Q1.1.jar
+MIDlet-Name: Q1.1
+MIDlet-Vendor: Vendor
+MIDlet-Version: 1.0
+MicroEdition-Configuration: CLDC-1.0
+MicroEdition-Profile: MIDP-2.0

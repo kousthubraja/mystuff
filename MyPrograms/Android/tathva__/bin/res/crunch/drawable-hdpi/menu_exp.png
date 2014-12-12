@@ -1,0 +1,22 @@
+mei">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="xalign">1</property>
+                <property name="label" translatable="yes">IMEI</property>
+                <property name="mnemonic_widget">label_imei</property>
+                <style>
+                  <class name="dim-label-ucc"/>
+                </style>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">1</property>
+                <property name="width">1</property>
+                <property name="height">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="heading_provider">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property na

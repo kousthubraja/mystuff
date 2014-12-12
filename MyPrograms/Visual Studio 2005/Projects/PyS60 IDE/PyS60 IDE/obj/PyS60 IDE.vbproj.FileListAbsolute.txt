@@ -1,0 +1,10 @@
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\PyS60 IDE\PyS60 IDE\bin\Debug\PyS60 IDE.exe
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\PyS60 IDE\PyS60 IDE\bin\Debug\PyS60 IDE.pdb
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\PyS60 IDE\PyS60 IDE\bin\Debug\PyS60 IDE.xml
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\PyS60 IDE\PyS60 IDE\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\PyS60 IDE\PyS60 IDE\obj\Debug\PyS60_IDE.Form1.resources
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\PyS60 IDE\PyS60 IDE\obj\Debug\PyS60_IDE.Resources.resources
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\PyS60 IDE\PyS60 IDE\obj\Debug\PyS60 IDE.vbproj.GenerateResource.Cache
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\PyS60 IDE\PyS60 IDE\obj\Debug\PyS60 IDE.exe
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\PyS60 IDE\PyS60 IDE\obj\Debug\PyS60 IDE.xml
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\PyS60 IDE\PyS60 IDE\obj\Debug\PyS60 IDE.pdb

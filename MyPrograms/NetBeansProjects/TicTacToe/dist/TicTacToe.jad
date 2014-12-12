@@ -1,0 +1,8 @@
+MIDlet-1: TicTacToe, , Source.TicTacToe
+MIDlet-Jar-Size: 6634
+MIDlet-Jar-URL: TicTacToe.jar
+MIDlet-Name: TicTacToe
+MIDlet-Vendor: Vendor
+MIDlet-Version: 1.0
+MicroEdition-Configuration: CLDC-1.0
+MicroEdition-Profile: MIDP-2.0

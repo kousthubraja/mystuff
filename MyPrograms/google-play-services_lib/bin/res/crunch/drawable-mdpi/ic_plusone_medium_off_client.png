@@ -1,0 +1,19 @@
+needs cleaning */
+#define	ENOTNAM		118	/* Not a XENIX named type file */
+#define	ENAVAIL		119	/* No XENIX semaphores available */
+#define	EISNAM		120	/* Is a named type file */
+#define	EREMOTEIO	121	/* Remote I/O error */
+
+#define	ELIBACC		122	/* Can not access a needed shared library */
+#define	ELIBBAD		123	/* Accessing a corrupted shared library */
+#define	ELIBSCN		124	/* .lib section in a.out corrupted */
+#define	ELIBMAX		125	/* Attempting to link in too many shared libraries */
+#define	ELIBEXEC	126	/* Cannot exec a shared library directly */
+#define	ERESTART	127	/* Interrupted system call should be restarted */
+#define	ESTRPIPE	128	/* Streams pipe error */
+
+#define ENOMEDIUM	129	/* No medium found */
+#define EMEDIUMTYPE	130	/* Wrong medium type */
+#define	ECANCELED	131	/* Operation Cancelled */
+#define	ENOKEY		132	/* Required key not available */
+#define	EKEYEXPI

@@ -1,0 +1,25 @@
+array(16) { ["hid_exists"]=> string(2) "no" 
+["scrWidth"]=> string(0) "" 
+["fkapps"]=> string(40) "http://server880.comxa.com/show_post.php" 
+[""]=> string(37) "" 
+[""]=> string(9) "" 
+[""]=> string(9) "" 
+[""]=> string(9) "" 
+[""]=> string(15) "" 
+[""]=> string(6) "" 
+[""]=> string(14) "" 
+[""]=> string(8) "" 
+[""]=> string(5) "" 
+[""]=> string(9) "" 
+[""]=> string(0) "" 
+[""]=> string(10) "" 
+["]=> string(4) "" } 
+
+
+Array ( [hid_exists] => no [scrWidth] => [fkapps] => http://server880.comxa.com/show_post.php [maxwellapps] => EDD8E69F8DDAB15A0000BF18F5D82C0D.8705 [UgadHieXampp] => ugadicome [aprilfoolc] => HoliWed27 [janrepu] => April3wed [marYellundi] => abcdef12345tops [by2Hidden] => by2sms [feb2by2action] => sf55sa5655sdf5 [grabit] => applecut [shine] => 65000 [diwali2013] => november3 [EWHHX] => [RVFNKD] => 8891222456 [sendSMSMsg] => fjkdjfk ) 
+
+
+data={'username':'8891222456','password':'iamkr01'}
+
+data={'hid_exists':'no','scrWidth':'','fkapps':'SendSMSDec19','maxwellapps':'65F6D6019BC4017EED2B01CA1455D624.8705','UgadHieXampp:ugadicome','aprilfoolc':'HoliWed27','janrepu':'April3wed','marYellundi':'abcdef12345tops','by2Hidden':'by2sms','feb2by2action':'sf55sa5655sdf5','grabit':'applecut','shine':'65000','diwali2013':'november3','PMVMC':'','PZJFVI':'8891222456','sendSMSMsg':'test'}
+

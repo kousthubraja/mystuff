@@ -1,0 +1,5 @@
+C:\Users\Kousthub\MyPrograms\dcrptr\bin\Debug\dcrptr.exe
+C:\Users\Kousthub\MyPrograms\dcrptr\bin\Debug\dcrptr.pdb
+C:\Users\Kousthub\MyPrograms\dcrptr\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Kousthub\MyPrograms\dcrptr\obj\Debug\dcrptr.exe
+C:\Users\Kousthub\MyPrograms\dcrptr\obj\Debug\dcrptr.pdb

@@ -1,0 +1,9 @@
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\DCRPTR\DCRPTR\bin\Release\DCRPTR.exe
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\DCRPTR\DCRPTR\bin\Release\DCRPTR.pdb
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\DCRPTR\DCRPTR\bin\Release\DCRPTR.xml
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\DCRPTR\DCRPTR\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\DCRPTR\DCRPTR\obj\Release\ConsoleApplication1.Resources.resources
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\DCRPTR\DCRPTR\obj\Release\DCRPTR.vbproj.GenerateResource.Cache
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\DCRPTR\DCRPTR\obj\Release\DCRPTR.exe
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\DCRPTR\DCRPTR\obj\Release\DCRPTR.xml
+C:\Users\Kousthub\Documents\Visual Studio 2005\Projects\DCRPTR\DCRPTR\obj\Release\DCRPTR.pdb

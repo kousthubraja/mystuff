@@ -1,0 +1,125 @@
+<form id="frm_sendsms" name="frm_sendsms" method="post" class="">
+	<input type="hidden" id="hid_exists" name="hid_exists" autocomplete="off">
+	<input type="hidden" id="scrWidth" name="scrWidth" />
+
+	<input type="hidden" id="fkapps" name="fkapps" value="SendSMSDec19" />
+	
+        
+		    <section class="send-sms">
+		      	<input type='hidden' name='maxwellapps' id='maxwellapps' value='' />
+
+<input type='hidden' name='UgadHieXampp' id='UgadHieXampp' value='' />
+<input type='hidden' name='aprilfoolc' id='aprilfoolc' value='' />
+<input type='hidden' name='janrepu' id='janrepu' value='April3wed' /> 
+<input type='hidden' name='marYellundi' id='marYellundi' value='abcdef12345tops' /> 
+<select style='display: none;' name='by2Hidden'><option value='by2sms'></option> </select>
+<input type='text' style='display: none;' name='feb2by2action' id='feb2by2action' value='sf55sa5655sdf5' />
+
+		      	 <input type="hidden" id="grabit" name="grabit" value="applecut">
+		      	 <input type="hidden" id="shine" name="shine" value="65000">
+		      	 <input type="hidden" id="diwali2013" name="diwali2013" value="november3">
+		      	 
+		      	 	<div class="noti-cont hidden">&nbsp;</div>
+
+		      	 	<div class="form-row">
+		      	 		<input type="hidden" name="PDXUW" id="PDXUW" value="">
+		      	 		<span class="mobile-ic">+91</span><!--			                
+			                
+			                	 --><input type="text" placeholder="Enter Mobile Number or Name"  class="mobile" id="JGCLPB" name="JGCLPB" ></div>
+			                                 
+               		
+               			<span class="message-ic" id="txt_sendsms_count">140</span><!--
+               			--><textarea class="message" placeholder="Enter your message" name="sendSMSMsg" id="sendSMSMsg" ></textarea>
+               	
+	       
+	        
+          		    
+     	</section> 
+     	
+           	<input type="button" value="Send Now" class="button button-large button-orange" onclick="javascript:sendNow();">	                  					                  	
+           	
+	</form>
+	<script>
+	function sendNow(){
+			 if(!window.parent.smsFloater){
+			 	if(satat==1){
+					if($("#textcode").val()==""){
+						displayNotification("Please enter verification code");
+						//$("#textcode").focus();
+						return false;
+					}
+					else{
+						document.forms[0].textcode.value=document.forms[0].textcode.value.replace(/\s/g, "");
+						window.parent.by2Rev(50);
+						for(var i=0;i<contacts.length;i++){
+				 			if(mob1==contacts[i].mobile){
+				 				existsFlag=true;		 				
+				 				break;
+				 			}
+				 		}
+				 		if(existsFlag==true){
+				 			document.getElementById("hid_exists").value="yes";
+				 		}
+				 		else{
+				 			document.getElementById("hid_exists").value="no";
+				 		}	
+				 		exCookie("shiftpro","axisproapril8th",1);	
+				 		$("#maxwellapps").val(mySessionVal);			 		
+				 		$("#UgadHieXampp").val("ugadicome");
+				 		$("#aprilfoolc").val("HoliWed27");
+						$('#btnsendsms').val("Sending...");
+						$('#btnsendsms').attr("disabled", true);
+						$('#sendlater').attr("disabled", true);	
+						window.parent.rampingStyle(true);
+						document.frm_sendsms.action=$("#fkapps").val();
+						setTimeout(function(){document.frm_sendsms.submit();},500);
+					}
+				}
+				else{
+				 	window.parent.by2Rev(50);
+				 	var mob=$("#JGCLPB").val();
+				 	mob=$.trim(mob);
+				 	var msg=$("#sendSMSMsg").val();
+				 	msg=$.trim(msg);
+				 	var existsFlag=false;
+				 	if(validation1(mob,msg)){		
+				 		//hid_exists
+				 		if(contacts==undefined)
+				 			contacts=$.parseJSON(window.parent.contacts);
+				 		
+				 		for(var i=0;i<contacts.length;i++){
+				 			if(mob1==contacts[i].mobile){
+				 				existsFlag=true;		 				
+				 				break;
+				 			}
+				 		}
+				 		if(existsFlag==true){
+				 			document.getElementById("hid_exists").value="yes";
+				 		}
+				 		else{
+				 			document.getElementById("hid_exists").value="no";
+				 		}			 		
+			 			setCookie("adCookie",1,1);
+			 			if(document.getElementById("restrictCaptcha")==undefined || document.getElementById("restrictCaptcha")==null)	{
+						   exCookie("shiftpro","axisproapril8th",1);	
+					 		$("#maxwellapps").val(mySessionVal);			 		
+					 		$("#UgadHieXampp").val("ugadicome");
+					 		$("#aprilfoolc").val("HoliWed27");
+						   $('#btnsendsms').val("Sending...");
+							$('#btnsendsms').attr("disabled", true);
+							$('#sendlater').attr("disabled", true);	
+							window.parent.rampingStyle(true);
+							document.frm_sendsms.action=$("#fkapps").val();
+							setTimeout(function(){document.frm_sendsms.submit();},500);
+					  	}
+					  	else{
+					  		satat=1;
+					  		$("#restrictCaptcha").removeClass("hidden");
+					  		$("#restrictCaptcha").css("display","block");					  		
+					  		//$("#smta").css("display","none");
+					  	}								
+					}
+				}
+			 }
+			}
+			 </script>

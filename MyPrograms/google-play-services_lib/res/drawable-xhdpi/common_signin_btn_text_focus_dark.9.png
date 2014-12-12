@@ -1,0 +1,86 @@
+cture does byte-wide writes with a read-modify-write
+ * sequence, it's not practical to have write-without-read privs.
+ * Thus the "-w- -> rw-" and "-wx -> rwx" mapping here (and in
+ * arch/alpha/mm/fault.c)
+ */
+	/* xwr */
+#define __P000	_PAGE_P(_PAGE_FOE | _PAGE_FOW | _PAGE_FOR)
+#define __P001	_PAGE_P(_PAGE_FOE | _PAGE_FOW)
+#define __P010	_PAGE_P(_PAGE_FOE)
+#define __P011	_PAGE_P(_PAGE_FOE)
+#define __P100	_PAGE_P(_PAGE_FOW | _PAGE_FOR)
+#define __P101	_PAGE_P(_PAGE_FOW)
+#define __P110	_PAGE_P(0)
+#define __P111	_PAGE_P(0)
+
+#define __S000	_PAGE_S(_PAGE_FOE | _PAGE_FOW | _PAGE_FOR)
+#define __S001	_PAGE_S(_PAGE_FOE | _PAGE_FOW)
+#define __S010	_PAGE_S(_PAGE_FOE)
+#define __S011	_PAGE_S(_PAGE_FOE)
+#define __S100	_PAGE_S(_PAGE_FOW | _PAGE_FOR)
+#define __S101	_PAGE_S(_PAGE_FOW)
+#define __S110	_PAGE_S(0)
+#define __S111	_PAGE_S(0)
+
+/*
+ * pgprot_noncached() is only for infiniband pci support, and a real
+ * implementation for RAM would be more complicated.
+ */
+#define pgprot_noncached(prot)	(prot)
+
+/*
+ * BAD_PAGETABLE is used when we need a bogus page-table, while
+ * BAD_PAGE is used for a bogus page.
+ *
+ * ZERO_PAGE is a global shared page that is always zero:  used
+ * for zero-mapped memory areas etc..
+ */
+extern pte_t __bad_page(void);
+extern pmd_t * __bad_pagetable(void);
+
+extern unsigned long __zero_page(void);
+
+#define BAD_PAGETABLE	__bad_pagetable()
+#define BAD_PAGE	__bad_page()
+#define ZERO_PAGE(vaddr)	(virt_to_page(ZERO_PGE))
+
+/* number of bits that fit into a memory pointer */
+#define BITS_PER_PTR			(8*sizeof(unsigned long))
+
+/* to align the pointer to a pointer address */
+#define PTR_MASK			(~(sizeof(void*)-1))
+
+/* sizeof(void*)==1<<SIZEOF_PTR_LOG2 */
+#define SIZEOF_PTR_LOG2			3
+
+/* to find an entry in a page-table */
+#define PAGE_PTR(address)		\
+  ((unsigned long)(address)>>(PAGE_SHIFT-SIZEOF_PTR_LOG2)&PTR_MASK&~PAGE_MASK)
+
+/*
+ * On certain platforms whose physical address space can overlap KSEG,
+ * namely EV6 and above, we must re-twiddle the physaddr to restore the
+ * correct high-order bits.
+ *
+ * This is extremely confusing until you realize that this is actually
+ * just working around a userspace bug.  The X server was intending to
+ * provide the physical address but instead provided the KSEG address.
+ * Or tried to, except it's not representable.
+ * 
+ * On Tsunami there's nothing meaningful at 0x40000000000, so this is
+ * a safe thing to do.  Come the first core logic that does put something
+ * in this area -- memory or whathaveyou -- then this hack will have
+ * to go away.  So be prepared!
+ */
+
+#if defined(CONFIG_ALPHA_GENERIC) && defined(USE_48_BIT_KSEG)
+#error "EV6-only feature in a generic kernel"
+#endif
+#if defined(CONFIG_ALPHA_GENERIC) || \
+    (defined(CONFIG_ALPHA_EV6) && !defined(USE_48_BIT_KSEG))
+#define KSEG_PFN	(0xc0000000000UL >> PAGE_SHIFT)
+#define PHYS_TWIDDLE(pfn) \
+  ((((pfn) & KSEG_PFN) == (0x40000000000UL >> PAGE_SHIFT)) \
+  ? ((pfn) ^= KSEG_PFN) : (pfn))
+#else
+#

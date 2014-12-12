@@ -1,0 +1,7 @@
+MIDlet-2: WolframAlphaMobile,/wolframlogo.png,WolframAlphaMobile
+MIDlet-1: WolframAlpha Mobile, , WolframAlphaMobile
+MIDlet-Vendor: Vendor
+MIDlet-Name: WolframAlpa
+MIDlet-Version: 1.0
+MicroEdition-Configuration: CLDC-1.0
+MicroEdition-Profile: MIDP-2.0

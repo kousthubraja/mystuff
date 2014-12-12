@@ -1,0 +1,72 @@
+Keyword	squid cache server reports
+Date	003-06-24
+These are squid server cache reports. Fairly benign, really except when you consider using them for evil purposes. For example, an institution stands up a proxy server for their internal users to get to the outside world. Then, the internal user surf all over to their hearts content (including intranet pages cuz well, the admins are stupid) Voila, intranet links show up in the external cache report. Want to make matters worse for yourself as an admin? OK, configure your external proxy server as a trusted internal host. Load up your web browser, set your proxy as their proxy and surf your way into their intranet. Not that I&#039;ve noticed any examples of this in this google list. *COUGH* *COUGH* *COUGH*  unresolved DNS lookups give clues *COUGH* *COUGH* (&#039;scuse me. must be a furball) OK, lets say BEST CASE scenario. Let&#039;s say there&#039;s not security problems revealed in these logs. Best case scenario is that outsiders can see what your company/agency/workers are surfing.
+
+Keyword	Ganglia Cluster Reports
+Date	003-06-24
+These are server cluster reports, great for info gathering. Lesse, what were those server names again?
+
+Keyword	ICQ chat logs, please...
+Date	003-06-24
+ICQ (http://www.icq.com) allows you to store the contents of your online chats into a file. These folks have their entire ICQ directories online. On purpose?
+
+Keyword	Apache online documentation
+Date	003-06-24
+When you install the Apache web server, you get a nice set of online documentation. When you learn how to use Apache, your supposed to delete these online Apache manuals. These sites didn&#039;t. If they&#039;re in such a hurry with Apache installs, I wonder what else they rushed through?
+
+Keyword	Coldfusion Error Pages
+Date	003-06-24
+These aren&#039;t too horribly bad, but there are SO MANY of them. These sites got googlebotted while the site was having "technical difficulties." The resulting cached error message gives lots of juicy tidbits about the target site.
+
+Keyword	Financial spreadsheets: finance.xls
+Date	003-06-24
+"Hey! I have a great idea! Let&#039;s put our finances on our website in a secret directory so we can get to it whenever we need to!"
+
+Keyword	Financial spreadsheets: finances.xls
+Date	003-06-24
+"Hey! I have a great idea! Let&#039;s put our finances on our website in a secret directory so we can get to it whenever we need to!"
+
+Keyword	sQL data dumps
+Date	003-06-24
+sQL database dumps. LOTS of data in these. So much data, infact, I&#039;m pressed to think of what else an ev1l hax0r would like to know about a target database.. What&#039;s that? Usernames and passwords you say? Patience, grasshopper.....
+
+Keyword	bash_history files
+Date	003-06-24
+Ok, this file contains what a user typed at a shell command prompt. You shouldn&#039;t advertise this file. You shouldn&#039;t flash it to a web crawler. It contains COMMANDS and USERNAMES and stuff... *sigh* Sometimes there aren&#039;t words to describe how lame people can be. This particular theme can be carried further to find all sorts of things along these lines like .profile, .login, .logout files, etc. I just got bored with all the combinations...
+
+Keyword	sh_history files
+Date	003-06-24
+Ok, this file contains what a user typed at a shell command prompt. You shouldn&#039;t advertise this file. You shouldn&#039;t flash it to a web crawler. It contains COMMANDS and USERNAMES and stuff... *sigh* Sometimes there aren&#039;t words to describe how lame people can be. This particular theme can be carried further to find all sorts of things along these lines like .profile, .login, .logout files, etc. I just got bored with all the combinations...
+
+Keyword	mysql history files
+Date	003-06-24
+The .mysql_history file contains commands that were performed against a mysql database. A "history" of said commands. First, you shouldn&#039;t show this file to anyone, especially not a MAJOR SEARCH ENGINE! Secondly, I sure hope you wouldn&#039;t type anything sensitive while interacting with your databases, like oh say USERNAMES AND PASSWORDS...
+
+Keyword	mt-db-pass.cgi files
+Date	003-06-24
+These folks had the technical prowess to unpack the movable type files, but couldn&#039;t manage to set up their web servers properly. Check the mt.cfg files for interesting stuffs...
+
+Keyword	Windows 2000 Internet Services
+Date	003-06-24
+At first glance, this search reveals even more examples of operating system users enabling the operating system default web server software. This is generally accepted to be a Bad Idea(TM) as mentioned in the previous example. However, the googleDork index on this particular category gets quite a boost from the fact that this particular screen should NEVER be seen by the general public. To quote the default index screen: "Any users attempting to connect to this site are currently receiving an &#039;Under Construction page&#039;" THIS is not the &#039;Under Construction page.&#039; I was only able to generate this screen while sitting at the console of the server. The fact that this screen is revealed to the general public may indicate a misconfiguration of a much more insidious nature...
+
+Keyword	IIS 4.0
+Date	003-06-24
+Moving from personal, lightweight web servers into more production-ready software, we find that even administrators of Microsoft&#039;s Internet Information Server (IIS) sometimes don&#039;t have a clue what they&#039;re doing. By searching on web pages with titles of "Welcome to IIS 4.0" we find that even if they&#039;ve taken the time to change their main page, some dorks forget to change the titles of their default-installed web pages. This is an indicator that their web server is most likely running, or was upgraded from, the now considered OLD IIS 4.0 and that at least portions of their main pages are still exactly the same as they were out of the box. Conclusion? The rest of the factory-installed stuff is most likely lingering around on these servers as well. Old code: FREE with operating system.Poor content management: an average of $40/hour. Factory-installed default scripts: FREE with operating system.Getting hacked by a script kiddie that found you on Google: PRICELESS.For all the things money can&#039;t buy, there&#039;s a googleDork award.
+
+Keyword	Look in my backup directories! Please?
+Date	2003-06-24
+Backup directories are often very interesting places to explore. More than one server has been compromised by a hacker&#039;s discovery of sensitive information contained in backup files or directories. Some of the sites in this search meant to reveal the contents of their backup directories, others did not. Think about it. What.s in YOUR backup directories? Would you care to share the contents with the whole of the online world? Probably not. Whether intentional or not, bsp.gsa.gov reveals backup directory through Google. Is this simply yet another misconfigured .gov site? You decide. BSP stands for "best security practices," winning this site the Top GoogleDork award for this category.
+
+Keyword	OpenBSD running Apache
+Date	2003-06-24
+I like the OpenBSD operating system. I really do. And I like the Apache web server software. Honestly. I admire the mettle of administrators who take the time to run quality, secure software. The problem is that you never know when security problems will pop up. A BIG security problem popped up within the OpenBSD/Apache combo back in the day.Now, every administrator that advertised this particular combo with cute little banners has a problem. Hackers can find them with Google. I go easy on these folks since the odds are they.ve patched their sites already. Then again, they may just show up on zone-h..
+
+Keyword	people.lst
+Date	2003-06-24
+*sigh*
+
+Keyword	passwd
+Date	2003-06-24
+There&#039;s nothing that defines a googleDork more than getting your PASSWORDS grabbed by Google for the world to see. Truly the epitome of a googleDork. The hits in this search show "passwd" files which contain encrypted passwords which may look like this: "guest MMCHhvZ6ODgFo" A password cracker can eat cheesy hashes faster than Elvis eatin&#039; jelly doughnuts. Bravo googleDorks! Good show!
+

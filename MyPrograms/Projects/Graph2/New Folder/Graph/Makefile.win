@@ -1,0 +1,57 @@
+# Project: Graph
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe -D__DEBUG__
+CC   = gcc.exe -D__DEBUG__
+WINDRES = windres.exe
+RES  = 
+OBJ  = main.o Includes/muParser.o Includes/muParserBase.o Includes/muParserBytecode.o Includes/muParserCallback.o Includes/muParserDLL.o Includes/muParserError.o Includes/muParserInt.o Includes/muParserTest.o Includes/muParserTokenReader.o $(RES)
+LINKOBJ  = main.o Includes/muParser.o Includes/muParserBase.o Includes/muParserBytecode.o Includes/muParserCallback.o Includes/muParserDLL.o Includes/muParserError.o Includes/muParserInt.o Includes/muParserTest.o Includes/muParserTokenReader.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32  -g3 
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = Graph.exe
+CXXFLAGS = $(CXXINCS)   -g3
+CFLAGS = $(INCS)   -g3
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Graph.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "Graph.exe" $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Includes/muParser.o: Includes/muParser.cpp
+	$(CPP) -c Includes/muParser.cpp -o Includes/muParser.o $(CXXFLAGS)
+
+Includes/muParserBase.o: Includes/muParserBase.cpp
+	$(CPP) -c Includes/muParserBase.cpp -o Includes/muParserBase.o $(CXXFLAGS)
+
+Includes/muParserBytecode.o: Includes/muParserBytecode.cpp
+	$(CPP) -c Includes/muParserBytecode.cpp -o Includes/muParserBytecode.o $(CXXFLAGS)
+
+Includes/muParserCallback.o: Includes/muParserCallback.cpp
+	$(CPP) -c Includes/muParserCallback.cpp -o Includes/muParserCallback.o $(CXXFLAGS)
+
+Includes/muParserDLL.o: Includes/muParserDLL.cpp
+	$(CPP) -c Includes/muParserDLL.cpp -o Includes/muParserDLL.o $(CXXFLAGS)
+
+Includes/muParserError.o: Includes/muParserError.cpp
+	$(CPP) -c Includes/muParserError.cpp -o Includes/muParserError.o $(CXXFLAGS)
+
+Includes/muParserInt.o: Includes/muParserInt.cpp
+	$(CPP) -c Includes/muParserInt.cpp -o Includes/muParserInt.o $(CXXFLAGS)
+
+Includes/muParserTest.o: Includes/muParserTest.cpp
+	$(CPP) -c Includes/muParserTest.cpp -o Includes/muParserTest.o $(CXXFLAGS)
+
+Includes/muParserTokenReader.o: Includes/muParserTokenReader.cpp
+	$(CPP) -c Includes/muParserTokenReader.cpp -o Includes/muParserTokenReader.o $(CXXFLAGS)

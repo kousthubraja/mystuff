@@ -1,0 +1,33 @@
+p
+	  Cabriolet AlphaPC64, AlphaPCI64 systems.  Derived from EB64+ but now
+	  baby-AT with Flash boot ROM, no on-board SCSI or Ethernet. 3 ISA
+	  slots, 4 PCI slots (one pair are on a shared slot), uses plug-in
+	  Bcache SIMMs.  Requires power supply with 3.3V output.
+
+config ALPHA_DP264
+	bool "DP264"
+	help
+	  Various 21264 systems with the tsunami core logic chipset.
+	  API Networks: 264DP, UP2000(+), CS20;
+	  Compaq: DS10(E,L), XP900, XP1000, DS20(E), ES40.
+
+config ALPHA_EB164
+	bool "EB164"
+	help
+	  EB164 21164 evaluation board from DEC.  Uses 21164 and ALCOR.  Has
+	  ISA and PCI expansion (3 ISA slots, 2 64-bit PCI slots (one is
+	  shared with an ISA slot) and 2 32-bit PCI slots.  Uses plus-in
+	  Bcache SIMMs. I/O sub-system provides SuperI/O (2S, 1P, FD), KBD,
+	  MOUSE (PS2 style), RTC/NVRAM.  Boot ROM is Flash.  PC-AT-sized
+	  motherboard.  Requires power supply with 3.3V output.
+
+config ALPHA_EB64P_CH
+	bool "EB64+"
+
+config ALPHA_EB66
+	bool "EB66"
+	help
+	  A Digital DS group board.  Uses 21066 or 21066A.  I/O sub-system is
+	  identical to EB64+.  Baby PC-AT size.  Runs from standard PC power
+	  supply.  The EB66 schematic was published as a marketing poster
+	  advertisi

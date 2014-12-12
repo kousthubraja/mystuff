@@ -1,0 +1,17 @@
+Private Sub Command1_Click()
+a = b = c = 1
+For a = 1 To 1000
+    For b = 1 To 1000 - a - c
+        For c = 1 To 1000 - a - b
+            If a * a + b * b = c * c Then
+                If a + b + c = 1000 Then
+                    GoTo fin
+                End If
+            End If
+        Next c
+    Next b
+Next a
+
+fin:
+Print a * b * c
+End Sub

@@ -1,0 +1,52 @@
+\n\
+	ldq $31,256($17)					\n\
+	xor $28,$1,$1						\n\
+	ldq $31,256($18)					\n\
+	xor $2,$3,$3		# 9 cycles from $3 load		\n\
+								\n\
+	ldq $31,256($19)					\n\
+	xor $3,$4,$4		# 9 cycles from $4 load		\n\
+	ldq $31,256($20)					\n\
+	xor $5,$6,$6		# 8 cycles from $6 load		\n\
+								\n\
+	stq $1,40($17)						\n\
+	xor $4,$6,$6						\n\
+	xor $7,$22,$22		# 7 cycles from $22 load	\n\
+	xor $23,$24,$24		# 6 cycles from $24 load	\n\
+								\n\
+	stq $6,48($17)						\n\
+	xor $22,$24,$24						\n\
+	ldq $31,256($21)					\n\
+	xor $24,$25,$25		# 8 cycles from $25 load	\n\
+								\n\
+	stq $25,56($17)						\n\
+	subq $16,1,$16						\n\
+	addq $21,64,$21						\n\
+	addq $20,64,$20						\n\
+								\n\
+	addq $19,64,$19						\n\
+	addq $18,64,$18						\n\
+	addq $17,64,$17						\n\
+	bgt $16,5b						\n\
+								\n\
+	ret							\n\
+	.end xor_alpha_prefetch_5				\n\
+");
+
+static struct xor_block_template xor_block_alpha = {
+	.name	= "alpha",
+	.do_2	= xor_alpha_2,
+	.do_3	= xor_alpha_3,
+	.do_4	= xor_alpha_4,
+	.do_5	= xor_alpha_5,
+};
+
+static struct xor_block_template xor_block_alpha_prefetch = {
+	.name	= "alpha prefetch",
+	.do_2	= xor_alpha_prefetch_2,
+	.do_3	= xor_alpha_prefetch_3,
+	.do_4	= xor_alpha_prefetch_4,
+	.do_5	= xor_alpha_prefetch_5,
+};
+
+/* For grins, also test the generic routines. 

@@ -1,0 +1,33 @@
+Private Sub Command1_Click()
+Dim a, b As Double
+a = fact(40)
+b = fact(20) * fact(20)
+MsgBox (Str(a / b))
+Text1 = a / b
+End Sub
+
+Function fact(ByVal n As Integer) As Double
+Dim f As Double
+f = 1
+For i = 2 To n
+f = f * i
+Next i
+fact = f
+End Function
+
+Private Sub Command2_Click()
+For i = 1 To 10000
+    For j = 1 To 10000
+        If d(i) = d(j) Then Su = Su + i + j
+    Next j
+Next i
+Next i
+Text1 = Su
+End Sub
+
+Function d(ByVal n As Integer) As Integer
+For i = 1 To n / 2
+    If n Mod i = 0 Then Sum = Sum + i
+Next i
+d = Sum
+End Function

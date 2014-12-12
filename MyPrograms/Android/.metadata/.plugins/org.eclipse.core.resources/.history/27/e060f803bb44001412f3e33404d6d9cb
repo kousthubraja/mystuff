@@ -1,0 +1,93 @@
+package com.example.ssht;
+
+import java.io.ByteArrayOutputStream;
+import java.util.Properties;
+
+import android.app.Activity;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.TextView;
+
+import com.jcraft.jsch.ChannelExec;
+import com.jcraft.jsch.JSch;
+import com.jcraft.jsch.Session;
+
+public class SSH extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_ssh);
+		final TextView tv=(TextView) findViewById(R.id.txt);
+		
+			new AsyncTask<Void, Void, Void>(){
+
+				@Override
+				protected Void doInBackground(Void... params) {
+					try {
+						executeRemoteCommand("kousthub_b130733cs", "iamkr01", "192.168.40.99", 22);
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					return null;
+				}
+				
+			}.execute();
+			
+		
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.ssh, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+	
+	public static String executeRemoteCommand(
+            String username,
+            String password,
+            String hostname,
+            int port) throws Exception {    
+
+JSch jsch = new JSch();
+Session session = jsch.getSession(username, hostname, 22);
+session.setPassword(password);
+
+// Avoid asking for key confirmation
+Properties prop = new Properties();
+prop.put("StrictHostKeyChecking", "no");
+session.setConfig(prop);
+
+session.connect();
+
+// SSH Channel
+ChannelExec channelssh = (ChannelExec)
+                session.openChannel("exec");      
+ByteArrayOutputStream baos = new ByteArrayOutputStream();
+channelssh.setOutputStream(baos);
+
+// Execute command
+channelssh.setCommand("mkdir tst_and");
+channelssh.connect();        
+channelssh.disconnect();
+
+return baos.toString();
+}
+}

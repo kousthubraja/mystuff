@@ -1,0 +1,88 @@
+[Root]
+Most Recent Package=Startup Setup
+
+
+[Package|Startup Setup|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=E:\MyCreations\VB\KeyLogger\Package
+
+[Package|Startup Setup|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Startup Setup|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Startup Setup|Files Found]
+
+[Package|Startup Setup|Files Released]
+
+[Package|Startup Setup|Missing Dependency Information]
+
+[Package|Startup Setup|Out-of-Date Dependency Information]
+
+[Package|Startup Setup|Files Added]
+
+[Package|Startup Setup|Files Removed]
+
+[Package|Startup Setup|Files In Project]
+E:\MyCreations\VB\KeyLogger\startup.exe=Yes
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\WINDOWS\system32\oleaut32.dll=Yes
+C:\WINDOWS\system32\olepro32.dll=Yes
+C:\WINDOWS\system32\asycfilt.dll=Yes
+C:\WINDOWS\system32\stdole2.tlb=Yes
+D:\Program Files\Programming\Visual Studio 6.0\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+D:\Program Files\Programming\Visual Studio 6.0\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\Program Files\Programming\Visual Studio 6.0\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+D:\Program Files\Programming\Visual Studio 6.0\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|Startup Setup|Configure Registry Files]
+Applicable=No
+
+[Package|Startup Setup|Configure Remote Servers]
+Applicable=No
+
+[Package|Startup Setup|Install Locations]
+E:\MyCreations\VB\KeyLogger\startup.exe=$(WinPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+D:\Program Files\Programming\Visual Studio 6.0\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Programming\Visual Studio 6.0\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\Programming\Visual Studio 6.0\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Programming\Visual Studio 6.0\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|Startup Setup|Configure Shared Files]
+Applicable=No
+E:\MyCreations\VB\KeyLogger\startup.exe=No
+
+[Package|Startup Setup|Distribution]
+Type=single
+Size=1.44 MB
+Title=startup
+
+[Package|Startup Setup|IconGroups]
+Group0=startup
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|Startup Setup|startup]
+Icon1=Startup.exe
+Title1=startup
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Startup Setup|Package]
+PackageFolder=E:\MyCreations\VB\KeyLogger\Package
+ProjectFolder=E:\MyCreations\VB\KeyLogger
+ServerSideCab=
+File1=E:\MyCreations\VB\KeyLogger\Package\setup.exe
+File2=E:\MyCreations\VB\KeyLogger\Package\Setup.Lst
+File3=E:\MyCreations\VB\KeyLogger\Package\Startup.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

@@ -1,0 +1,8 @@
+MIDlet-1: Lines, , Source.Lines
+MIDlet-Jar-Size: 2296
+MIDlet-Jar-URL: Lines.jar
+MIDlet-Name: Lines
+MIDlet-Vendor: Vendor
+MIDlet-Version: 1.0
+MicroEdition-Configuration: CLDC-1.0
+MicroEdition-Profile: MIDP-2.0

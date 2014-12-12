@@ -1,0 +1,9 @@
+MIDlet-1: WolframAlpha Mobile, , WolframAlphaMobile
+MIDlet-2: WolframAlphaMobile,/wolframlogo.png,WolframAlphaMobile
+MIDlet-Jar-Size: 55410
+MIDlet-Jar-URL: WolframAlpa.jar
+MIDlet-Name: WolframAlpa
+MIDlet-Vendor: Vendor
+MIDlet-Version: 1.0
+MicroEdition-Configuration: CLDC-1.0
+MicroEdition-Profile: MIDP-2.0

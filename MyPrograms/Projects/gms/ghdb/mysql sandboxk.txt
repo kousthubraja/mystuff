@@ -1,0 +1,19 @@
+$mysql_host = "mysql13.000webhost.com";
+$mysql_database = "a3175354_ghdb";
+$mysql_user = "a3175354_ghdb";
+$mysql_password = "iamkr01";
+
+$mysql_host = "mysql9.000webhost.com";
+$mysql_database = "a9814598_ghdb1";
+$mysql_user = "a9814598_ghdb1";
+$mysql_password = "iamkr01";
+
+INSERT INTO  `a9814598_ghdb1`.`ghdb1` (
+`Id` ,
+`Date` ,
+`Keyword` ,
+`Description`
+)
+VALUES (
+'1',  '2003-06-24',  'this is a test',  'test'
+);

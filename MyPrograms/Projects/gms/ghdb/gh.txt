@@ -1,0 +1,20 @@
+Keyword	"Index of /backup"
+Date	2003-06-24
+Backup directories are often very interesting places to explore. More than one server has been compromised by a hacker&#039;s discovery of sensitive information contained in backup files or directories. Some of the sites in this search meant to reveal the contents of their backup directories, others did not. Think about it. What.s in YOUR backup directories? Would you care to share the contents with the whole of the online world? Probably not. Whether intentional or not, bsp.gsa.gov reveals backup directory through Google. Is this simply yet another misconfigured .gov site? You decide. BSP stands for "best security practices," winning this site the Top GoogleDork award for this category.
+
+Keyword	"powered by openbsd" +"powered by apache"
+Date	2003-06-24
+I like the OpenBSD operating system. I really do. And I like the Apache web server software. Honestly. I admire the mettle of administrators who take the time to run quality, secure software. The problem is that you never know when security problems will pop up. A BIG security problem popped up within the OpenBSD/Apache combo back in the day.Now, every administrator that advertised this particular combo with cute little banners has a problem. Hackers can find them with Google. I go easy on these folks since the odds are they.ve patched their sites already. Then again, they may just show up on zone-h..
+
+Keyword	intitle:index.of intext:"secring.skr"|"secring.pgp"|"secring.bak"
+Date	2003-06-24
+PGP is a great encryption technology. It keeps secrets safe. Everyone from drug lords to the head of the DEA can download PGP to encrypt their sensitive documents. Everyone, that is except googleDorks. GoogleDorks, it seems, don&#039;t understand that anyone in possession of your private keyring (secring) can get to your secret stuff. It should noever be given out, and should certainly not be posted on the Internet. The highest ranking is awarded for this surprising level of ineptitude.
+
+Keyword	intitle:index.of people.lst
+Date	2003-06-24
+*sigh*
+
+Keyword	intitle:index.of passwd passwd.bak
+Date	2003-06-24
+There&#039;s nothing that defines a googleDork more than getting your PASSWORDS grabbed by Google for the world to see. Truly the epitome of a googleDork. The hits in this search show "passwd" files which contain encrypted passwords which may look like this: "guest MMCHhvZ6ODgFo" A password cracker can eat cheesy hashes faster than Elvis eatin&#039; jelly doughnuts. Bravo googleDorks! Good show!
+

@@ -1,0 +1,42 @@
+package test.kr.htmldbtest;
+
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.webkit.WebView.FindListener;
+import android.widget.TextView;
+
+public class DBase extends SQLiteOpenHelper {
+
+	public DBase(Context context) {
+		super(context, "htmltest.db",null,1);
+		// TODO Auto-generated constructor stub
+	}
+
+
+	@Override
+	public void onCreate(SQLiteDatabase arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onUpgrade(SQLiteDatabase arg0, int arg1, int arg2) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public Content getContent(String id){
+		SQLiteDatabase db=getReadableDatabase();
+		String query="SELECT id,content,image FROM htmls WHERE id="+id;
+		Cursor cursor=db.rawQuery(query,null);
+		cursor.moveToFirst();
+		Content content=new Content(cursor.getString(0),cursor.getString(1),cursor.getBlob(2));
+		return content;
+//		return cursor.getString(0);
+	}
+	
+	
+
+}

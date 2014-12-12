@@ -1,0 +1,8 @@
+MIDlet-1: NetTest, , Source.NetTest
+MIDlet-Jar-Size: 3153
+MIDlet-Jar-URL: Net_Test.jar
+MIDlet-Name: Net Test
+MIDlet-Vendor: Vendor
+MIDlet-Version: 1.0
+MicroEdition-Configuration: CLDC-1.0
+MicroEdition-Profile: MIDP-2.0

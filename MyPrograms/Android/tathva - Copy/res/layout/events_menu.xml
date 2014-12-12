@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/LinearLayout01"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/cus_5" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Button
+        android:id="@+id/nitesBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/nites_button"
+        android:gravity="center_vertical|center_horizontal"
+        android:paddingBottom="100dp"
+        android:text="nites"
+        android:textColor="#555555"
+        android:textSize="30sp" />
+
+    <SlidingDrawer
+        android:id="@+id/sdCompetitions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="60dp"
+        android:content="@+id/clCompetitions"
+        android:handle="@+id/sdbCompetitions"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/sdbCompetitions"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/right_off"
+            android:text="C\nO\nM\nP\nE\nT\nI\nT\nI\nO\nN\nS"
+            android:textColor="#F5FBEF"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/clCompetitions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
+			<ExpandableListView
+                android:id="@+id/EXPlistViewC"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:cacheColorHint="#00000000"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="10sp" />
+        </LinearLayout>
+    </SlidingDrawer>
+
+    <SlidingDrawer
+        android:id="@+id/sdLectures"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="45dp"
+        android:content="@+id/clLectures"
+        android:handle="@+id/sdbLectures"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/sdbLectures"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/bottom_bar_off"
+            android:text="LECTURES"
+            android:textColor="#F5FBEF"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/clLectures"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/listViewL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#AA7401DF"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="10sp" />
+        </LinearLayout>
+    </SlidingDrawer>
+
+    <SlidingDrawer
+        android:id="@+id/sdWorkshops"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="45dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:content="@+id/clWorkshops"
+        android:handle="@+id/sdbWorkshops"
+        android:orientation="vertical"
+        android:rotation="180" >
+
+        <Button
+            android:id="@+id/sdbWorkshops"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/top_off"
+            android:rotation="180"
+            android:text="WORKSHOPS"
+            android:textColor="#F5FBEF"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/clWorkshops"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="0dp" >
+
+            <ListView
+                android:id="@+id/listViewW"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#AAB4045F"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="10sp"
+                android:rotation="180" />
+        </LinearLayout>
+    </SlidingDrawer>
+
+    <SlidingDrawer
+        android:id="@+id/sdExhibitions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="60dp"
+        android:content="@+id/clExhibitions"
+        android:handle="@+id/sdbExhibitions"
+        android:orientation="horizontal"
+        android:rotation="180" >
+
+        <Button
+            android:id="@+id/sdbExhibitions"
+            android:layout_width="45dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/left_off"
+            android:rotation="180"
+            android:text="E\nX\nH\nI\nB\nI\nT\nI\nO\nN\nS"
+            android:textColor="#F5FBEF"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/clExhibitions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="0dp" >
+
+            <ListView
+                android:id="@+id/listViewE"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#AAB43104"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="10sp"
+                android:rotation="180" />
+        </LinearLayout>
+    </SlidingDrawer>
+
+</RelativeLayout>

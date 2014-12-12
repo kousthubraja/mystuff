@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<conio.h>
+int main(){
+long a,b,i=1,t;
+clrscr();
+scanf("%d",&t);
+printf("%d",t);
+for(i=1;i<=t;i++)
+{
+scanf("%d",&a);
+scanf("%d",&b);
+printf("%d",a+b);
+}
+return 0;
+}

@@ -1,0 +1,14 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<string.h>
+void main(){
+int i;
+char c[10];
+clrscr();
+//cout<<"Number the numbers : ";
+cin>>c;
+for(i=0;i<strlen(c);i++)
+cout<<"Number is "<<c<<'\n';
+getch();
+}

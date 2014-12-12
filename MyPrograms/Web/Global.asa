@@ -1,0 +1,51 @@
+<script language="vbscript" runat="server">
+
+Sub Application_OnStart
+	
+Set FlirtConn = Server.CreateObject("ADODB.Connection")
+DSNFlirt="DRIVER={SQL server};SERVER=10.0.0.2;UID=Face2;PWD=LinkFace;DATABASE=FaceLink;"
+FlirtConn.open DSNFlirt
+Set Application("FlirtDBconn")=FlirtConn
+
+	
+	Application("LinkSecured") = "http://www.facelink.ro/"
+	Application("LinkSecSSL") = "http://www.facelink.ro/"
+	Application("RegularLink") = "http://www.facelink.ro/"
+	Application("PreRoot") = "http://"
+	Application("LinkRoot") = "http://www.facelink.ro"
+	Application("PathHard")="c:\sites\\FaceLink.ro\Data"
+	Application("Where")="home"
+	Application("Hit")=0
+	
+	Application("DoLog")=True
+	Application("DoStatistic")=True
+		
+	Application("DateStartWeb")=Cdate("01/07/2010 00:00:00")
+    Application("Currency")="$"
+    Application("CurrencyToTranzila")="2" '1=shekel , 2=dolar , 7=euro
+    Application("CurrencyEcange")="3.3309"
+    Application("CurrencyEcangeToShow")=" RON "
+
+End Sub
+
+Sub Application_OnEnd
+	response.redirect Application("RegularLink") 
+End Sub
+
+Sub Session_OnStart
+	if Application("DoLog") then
+		Set x=Application("FlirtDBconn").Execute("SetUserLog '" & Request.ServerVariables("REMOTE_ADDR") & "'")
+		session("LogID")=x("LogID")
+	end if
+End Sub
+
+Sub Session_OnEnd
+	if Application("DoLog") then
+		Set xEx=Application("FlirtDBconn").Execute("SetUserLogEx " &  Cdbl(session("LogID")))
+	end if
+End Sub
+
+</SCRIPT>
+
+
+

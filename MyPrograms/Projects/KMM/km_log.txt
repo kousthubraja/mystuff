@@ -1,0 +1,914 @@
+K connected
+M connected
+M : hi
+K : hi
+K : sup?
+K : lov u
+K : :)
+M : :)
+M disconnected
+K disconnected
+M connected
+K connected
+K : hi
+K : entha pani?
+M : onnuilla
+M : :)
+M disconnected
+K disconnected
+M connected
+K connected
+K : hi
+K : hello
+M : entha?
+M disconnected
+K disconnected
+K connected
+M connected
+M : hi
+K : entha?
+M connected
+K connected
+M : hi
+M : sup?
+K : wat?
+M : tt
+M : test
+M : test1
+M : #quit
+K : #quit
+K disconnected
+M : kill %2
+M disconnected
+K connected
+M connected
+M : hi
+K : enth
+K connected
+K : hi
+M : n
+M : n
+M : test
+M connected
+M : hi
+K : et
+K : wta
+K connected
+M connected
+M : hi
+M : test
+K connected
+M connected
+M : hi
+M : nn
+K : dd
+K connected
+K : yeh
+M : wat?
+K connected
+M connected
+M : hi
+M : 22
+M : 33
+K connected
+K : 00
+M : 11
+K connected
+K connected
+K connected
+M connected
+K connected
+K connected
+M connected
+M : jii
+M : dd
+K connected
+M connected
+M connected
+K connected
+K connected
+M connected
+M : hi
+M connected
+K connected
+K connected
+K connected
+M connected
+K connected
+M connected
+M : hi
+K : hk
+K : test
+K : bye
+K connected
+M connected
+M : fd
+K : kk
+K : cc
+M : nm
+K connected
+M connected
+M : hi
+K : sup?
+K : B
+M : A
+M : M
+K connected
+K : M
+K : J
+K : hi
+M : hkf
+M : hk
+K connected
+M connected
+K : G
+K : M
+M : A
+M : T
+M connected
+K connected
+M : 1
+K : ddk
+M : kkl
+K : D
+K : M
+K : J
+K : W
+M : T
+M : M
+M : K
+M : A
+M : P
+K disconnected
+M connected
+M : hizzza
+K connected
+M connected
+K : hi
+M : sup?
+M disconnected
+M connected
+K connected
+K connected
+M connected
+K : 3
+M : 5
+M : hello
+K : sup?
+K disconnected
+M connected
+K connected
+K disconnected
+K connected
+M connected
+M : hi
+K : kk
+K : jj
+K : test
+M : wat
+M disconnected
+K connected
+M connected
+M : ss
+K : cc
+K disconnected
+M connected
+K connected
+M : d
+K : e
+M disconnected
+K connected
+M connected
+M : c
+K : ee
+M disconnected
+M connected
+M : 33
+K connected
+M connected
+K : 3
+M : sd
+M disconnected
+M connected
+M : ff
+K : ww
+M disconnected
+K connected
+M connected
+K : 2
+M : .
+M : .
+M : 2
+M : 2
+K : j
+K : j
+K : j
+K : j
+M : hj
+M disconnected
+M connected
+M : ji
+K : nn
+K disconnected
+M connected
+K connected
+K : k
+M : nn
+M : jj
+K : nn
+M : oo
+M disconnected
+K connected
+M connected
+M disconnected
+K connected
+M connected
+K : 5
+K : 6
+M : ji
+M disconnected
+K connected
+M connected
+M : M
+K : P
+K : M
+K : 1
+M : W
+K : 1
+K disconnected
+K connected
+M connected
+M : hi
+K : tst
+K : yes
+K disconnected
+K connected
+M connected
+M : M
+K : D
+K : G
+K : D
+M : P
+K : D
+M : D
+M : T
+M disconnected
+M connected
+K connected
+K : A
+K : D
+K : D
+M : A
+M : W
+M : D
+K : 1
+K : M
+K : J
+K disconnected
+K connected
+M connected
+K : hi
+K : kk
+M : test
+M : wat??
+K : nothing
+M disconnected
+K connected
+M connected
+K connected
+K : J
+K : T
+M : hi
+M : dd
+K : T
+M : dd
+K disconnected
+M connected
+K connected
+K : hi
+M : wat?
+M : nothing
+K : test
+K : yes
+K : kdk
+K : no
+K : wat?
+K : bye
+M disconnected
+M connected
+M : hi
+K : yeh
+K : yeh
+K disconnected
+K connected
+K : 33
+M : 33
+M disconnected
+M connected
+M : P
+K : c
+K : dd
+K disconnected
+M connected
+K connected
+M : hi
+K : hi
+K : test
+K : yep
+M : tt
+M disconnected
+M connected
+K connected
+K : M
+M : J
+M : D
+M disconnected
+K connected
+M connected
+K : JM
+K : 11
+M : hh
+K disconnected
+M connected
+K connected
+K : A
+M : 3
+K disconnected
+M connected
+K connected
+K : D
+M : hi
+M disconnected
+M connected
+K connected
+M : hi
+K : A
+M disconnected
+K connected
+M connected
+K : A
+M : 3
+M : 3
+K disconnected
+K connected
+M connected
+M : 3
+M : 2
+M : 3
+M : 1
+M : a
+M : A
+K disconnected
+K connected
+M : hi
+K : G
+K : M
+K : M
+K : T
+K : 000
+M : 1
+M disconnected
+M connected
+K connected
+K : D
+M : :)
+M : hello
+K disconnected
+K connected
+K disconnected
+K connected
+K disconnected
+K connected
+K : J
+M : hi
+M : kk
+M : ,,
+M disconnected
+K connected
+M connected
+K : A
+M : hi
+M : ss
+M : aa
+M : cc
+K : E
+K disconnected
+K connected
+M connected
+M : hi
+M : 3
+M disconnected
+K connected
+M connected
+K : A
+M : a
+K disconnected
+K connected
+M : hi
+K : D
+K : D
+K disconnected
+K connected
+M connected
+M : hi
+K : M
+K : K
+M : y]
+M disconnected
+K connected
+M connected
+K : hi
+M : test
+M : tea
+M : really working
+M disconnected
+M connected
+K connected
+K : hi
+M : test
+M : dfk
+K disconnected
+K connected
+K disconnected
+K connected
+K : A
+M : test
+M : 1t
+M disconnected
+M connected
+K connected
+K : D
+M : tst
+M : 1`
+M : f`
+M disconnected
+K connected
+M connected
+K : D
+M : M
+M : M
+M : T
+K : J
+K : 1
+K : T
+K disconnected
+M connected
+K connected
+K : A
+M : D
+M : J
+K disconnected
+M connected
+K connected
+K : J
+M : fkdf
+K disconnected
+K connected
+M connected
+M : A
+M : P
+K : W
+K : 1
+K disconnected
+M connected
+K connected
+K disconnected
+K connected
+M connected
+M : D
+K : A
+M : J
+K : W
+M : G
+K disconnected
+K connected
+M connected
+M : M
+K : AW
+K : 1
+M disconnected
+K connected
+M connected
+M : M
+K : 11
+M : W
+M disconnected
+M connected
+M : M
+M connected
+M : D
+M connected
+M : A
+M connected
+K connected
+K : D
+K : D
+K : 1
+K : 1
+M : D
+M : D
+M : 1
+M : 1
+K disconnected
+K connected
+M connected
+M : hi
+K : dup
+M : nnn
+M : nn
+M : nn
+M : nnyr
+M : hghgh
+M : hghgh
+M : hghgh
+M : hg
+M : hghgh
+M : gh
+M : gh
+M : gh
+M : ghgg
+M : hg
+M : hg
+M : hg
+M : hg
+M : hg
+M : h
+M : gh
+M : ghg
+M : hg
+M : h
+M : g
+M : hg
+M : h
+M : g
+M : hg
+M : hg
+M : h
+M : g
+M : hg
+M : h
+M : gh
+M : g
+M : hbnbhghghhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+M : vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+M disconnected
+M connected
+M : A
+M : 1
+K : D
+K : T
+K disconnected
+K connected
+M connected
+K : hieslajk
+M : sup?
+M disconnected
+M connected
+K connected
+K : DMD
+M : ADM
+K : fder
+M : kello
+K : ad
+K disconnected
+M connected
+K connected
+K : hi
+M : sup?
+M disconnected
+K connected
+M connected
+M : nnndd
+M disconnected
+M connected
+K connected
+K : hello entha pani?
+M : onnumilla....
+M disconnected
+K connected
+M connected
+M : hello
+K : hhhhh
+M disconnected
+K connected
+K connected
+M connected
+K connected
+K connected
+M connected
+K : hi
+M : sup?
+M disconnected
+M connected
+K connected
+M : d
+K : d
+K : c
+M : ff
+M disconnected
+K connected
+K connected
+M connected
+M : hi
+K : say
+M disconnected
+M connected
+K disconnected
+M connected
+K connected
+M : dd
+K : cc
+M disconnected
+K connected
+M connected
+K : d
+M : 21
+M disconnected
+K connected
+K connected
+M connected
+K : hello eee
+M : ddkei
+M : jfkdk
+K : jfkdkfjdkfjdjflk
+M disconnected
+K connected
+M connected
+M : hello
+K : sup?
+K disconnected
+M disconnected
+M connected
+K connected
+K disconnected
+K connected
+M connected
+K disconnected
+K connected
+M disconnected
+M connected
+K disconnected
+K connected
+K : DAND
+K disconnected
+M connected
+K connected
+K : hello
+K : entha?
+M : dk;ao
+K disconnected
+K connected
+M connected
+K disconnected
+M connected
+K connected
+K : hello man
+M : man?
+M : u calling me?
+K : sorry... chat marippoyi
+K : entha pani?
+M disconnected
+M connected
+K disconnected
+K connected
+K disconnected
+M connected
+K connected
+K : ADMJT
+K : keloo
+K : ,ckdl
+K : sup?
+M : entha
+M disconnected
+K disconnected
+M connected
+K connected
+M disconnected
+K disconnected
+M connected
+M disconnected
+M connected
+M disconnected
+M connected
+M disconnected
+M connected
+M disconnected
+M connected
+M disconnected
+M connected
+M disconnected
+M connected
+M disconnected
+M connected
+M disconnected
+M connected
+M disconnected
+M connected
+M disconnected
+M connected
+M disconnected
+M connected
+M disconnected
+K connected
+K connected
+K disconnected
+K connected
+K connected
+K disconnected
+M connected
+M disconnected
+M connected
+K connected
+M : dcsddfdf
+K : 0TWTGKA1GA
+K disconnected
+M disconnected
+K connected
+M connected
+K disconnected
+M disconnected
+M connected
+K connected
+M : hello...
+M : entha pani?
+K : nothing... u?
+M : nothin.ggg
+M disconnected
+K disconnected
+K connected
+M connected
+K : hey
+M : sup bro?
+M : ss
+M : dkjf
+K : cc
+K : dd
+K disconnected
+M connected
+K connected
+K disconnected
+M connected
+K connected
+K disconnected
+M connected
+K connected
+M disconnected
+M connected
+K connected
+M : hello
+K : sup?
+M : wat?
+K : ntn
+M disconnected
+K disconnected
+K connected
+M connected
+K : hi
+M : hi
+K disconnected
+K connected
+M connected
+M : hi
+K : sup?
+M : enta pani?
+K : ntn
+K : bye
+K disconnected
+K connected
+M connected
+G connected
+M : hey
+K : sup?
+G : entha?
+G : nothing
+M : gotta go
+K : m
+K : m
+K : m send cant b seen by g
+G disconnected
+M disconnected
+K disconnected
+G connected
+K connected
+M connected
+M : hi
+G connected
+K connected
+M connected
+K : hi
+K : sup guys?
+G : hi
+G : entha pani?
+M : ntn
+M : ntn
+M : u guys?
+M disconnected
+M connected
+M disconnected
+M connected
+M : hi
+M : enta
+G : nn
+K : n
+K : dd
+G disconnected
+G connected
+M : hi
+G : hey
+K : sup?
+K disconnected
+K connected
+K : hello
+K : entha?
+M disconnected
+G disconnected
+G connected
+M connected
+M : hi
+G : hello
+K : sup?
+K : kjf
+K : kd
+M disconnected
+G disconnected
+K disconnected
+K connected
+G connected
+M connected
+G : hi
+M : enta?
+K : ntn
+K : ntn
+G : oho
+K : yea
+M : then?
+M : cc
+M : qq
+M disconnected
+G disconnected
+K disconnected
+K connected
+M connected
+G connected
+K : hello
+G : enta pani?
+M : ntn
+M : wbu?
+G disconnected
+G connected
+G disconnected
+G connected
+G : hey
+G : sup?
+M : ntn
+K : wbu
+K disconnected
+G disconnected
+m disconnected
+K connected
+M connected
+G connected
+M : hello
+G : ntn
+K connected
+K : hello
+K disconnected
+K connected
+m disconnected
+K disconnected
+K connected
+G connected
+M connected
+M : ntn
+m disconnected
+M connected
+G connected
+K connected
+K : hello
+M : sup?
+G : yea..
+G : enta?
+G : ntn
+K disconnected
+m disconnected
+G disconnected
+K connected
+M connected
+G connected
+G : hello....
+M : sup?
+K : yea...
+m disconnected
+K disconnected
+G disconnected
+M connected
+K connected
+G connected
+G : hiii
+M : yes
+K : enta?
+K : ddd
+M : ntn
+m disconnected
+K disconnected
+G disconnected

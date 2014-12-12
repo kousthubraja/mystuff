@@ -1,0 +1,26 @@
+import socket
+from threading import Thread
+import sys
+
+s=socket.socket()
+host=socket.gethostname()
+port=8085
+s.connect((host,port))
+
+def rec():
+	while True:
+		txt=s.recv(1024)
+		if txt.strip()=="":
+			s.close()
+			break
+		print txt
+
+
+thread=Thread(target=rec,args=())
+thread.start()
+txt=""
+while True:
+	txt=raw_input("~: ")
+	if txt.strip()!="":
+		print "Me : "+txt
+		s.send(txt)

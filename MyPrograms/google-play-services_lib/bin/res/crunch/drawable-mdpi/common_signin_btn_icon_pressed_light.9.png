@@ -1,0 +1,63 @@
+ldq $23,48($17)						\n\
+	xor $3,$5,$5						\n\
+								\n\
+	ldq $24,48($18)						\n\
+	ldq $25,48($19)						\n\
+	ldq $27,48($20)						\n\
+	ldq $0,56($17)						\n\
+								\n\
+	ldq $1,56($18)						\n\
+	ldq $2,56($19)						\n\
+	ldq $3,56($20)						\n\
+	xor $6,$7,$7		# 8 cycles from $6 load		\n\
+								\n\
+	ldq $31,256($17)					\n\
+	xor $21,$22,$22		# 8 cycles from $22 load	\n\
+	ldq $31,256($18)					\n\
+	xor $7,$22,$22						\n\
+								\n\
+	ldq $31,256($19)					\n\
+	xor $23,$24,$24		# 6 cycles from $24 load	\n\
+	ldq $31,256($20)					\n\
+	xor $25,$27,$27		# 6 cycles from $27 load	\n\
+								\n\
+	stq $5,32($17)						\n\
+	xor $24,$27,$27						\n\
+	xor $0,$1,$1		# 7 cycles from $1 load		\n\
+	xor $2,$3,$3		# 6 cycles from $3 load		\n\
+								\n\
+	stq $22,40($17)						\n\
+	xor $1,$3,$3						\n\
+	stq $27,48($17)						\n\
+	subq $16,1,$16						\n\
+								\n\
+	stq $3,56($17)						\n\
+	addq $20,64,$20						\n\
+	addq $19,64,$19						\n\
+	addq $18,64,$18						\n\
+								\n\
+	addq $17,64,$17						\n\
+	bgt $16,4b						\n\
+	ret							\n\
+	.end xor_alpha_prefetch_4				\n\
+								\n\
+	.align 3						\n\
+	.ent xor_alpha_prefetch_5				\n\
+xor_alpha_prefetch_5:						\n\
+	.prologue 0						\n\
+	srl $16, 6, $16						\n\
+								\n\
+	ldq $31, 0($17)						\n\
+	ldq $31, 0($18)						\n\
+	ldq $31, 0($19)						\n\
+	ldq $31, 0($20)						\n\
+	ldq $31, 0($21)						\n\
+								\n\
+	ldq $31, 64($17)					\n\
+	ldq $31, 64($18)					\n\
+	ldq $31, 64($19)					\n\
+	ldq $31, 64($20)					\n\
+	ldq $31, 64($21)					\n\
+								\n\
+	ldq $31, 128($17)					\n\
+	ldq $31, 1

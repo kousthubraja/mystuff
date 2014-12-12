@@ -1,0 +1,138 @@
+igned int, ioread32, /**/)
+REMAP1(u8, readb, const volatile)
+REMAP1(u16, readw, const volatile)
+REMAP1(u32, readl, const volatile)
+REMAP1(u64, readq, const volatile)
+
+REMAP2(u8, iowrite8, /**/)
+REMAP2(u16, iowrite16, /**/)
+REMAP2(u32, iowrite32, /**/)
+REMAP2(u8, writeb, volatile)
+REMAP2(u16, writew, volatile)
+REMAP2(u32, writel, volatile)
+REMAP2(u64, writeq, volatile)
+
+#undef REMAP1
+#undef REMAP2
+
+extern inline void __iomem *generic_ioportmap(unsigned long a)
+{
+	return alpha_mv.mv_ioportmap(a);
+}
+
+static inline void __iomem *generic_ioremap(unsigned long a, unsigned long s)
+{
+	return alpha_mv.mv_ioremap(a, s);
+}
+
+static inline void generic_iounmap(volatile void __iomem *a)
+{
+	return alpha_mv.mv_iounmap(a);
+}
+
+static inline int generic_is_ioaddr(unsigned long a)
+{
+	return alpha_mv.mv_is_ioaddr(a);
+}
+
+static inline int generic_is_mmio(const volatile void __iomem *a)
+{
+	return alpha_mv.mv_is_mmio(a);
+}
+
+#define __IO_PREFIX		generic
+#define generic_trivial_rw_bw	0
+#define generic_trivial_rw_lq	0
+#define generic_trivial_io_bw	0
+#define generic_trivial_io_lq	0
+#define generic_trivial_iounmap	0
+
+#else
+
+#if defined(CONFIG_ALPHA_APECS)
+# include <asm/core_apecs.h>
+#elif defined(CONFIG_ALPHA_CIA)
+# include <asm/core_cia.h>
+#elif defined(CONFIG_ALPHA_IRONGATE)
+# include <asm/core_irongate.h>
+#elif defined(CONFIG_ALPHA_JENSEN)
+# include <asm/jensen.h>
+#elif defined(CONFIG_ALPHA_LCA)
+# include <asm/core_lca.h>
+#elif defined(CONFIG_ALPHA_MARVEL)
+# include <asm/core_marvel.h>
+#elif defined(CONFIG_ALPHA_MCPCIA)
+# include <asm/core_mcpcia.h>
+#elif defined(CONFIG_ALPHA_POLARIS)
+# include <asm/core_polaris.h>
+#elif defined(CONFIG_ALPHA_T2)
+# include <asm/core_t2.h>
+#elif defined(CONFIG_ALPHA_TSUNAMI)
+# include <asm/core_tsunami.h>
+#elif defined(CONFIG_ALPHA_TITAN)
+# include <asm/core_titan.h>
+#elif defined(CONFIG_ALPHA_WILDFIRE)
+# include <asm/core_wildfire.h>
+#else
+#error "What system is this?"
+#endif
+
+#endif /* GENERIC */
+
+/*
+ * We always have external versions of these routines.
+ */
+extern u8		inb(unsigned long port);
+extern u16		inw(unsigned long port);
+extern u32		inl(unsigned long port);
+extern void		outb(u8 b, unsigned long port);
+extern void		outw(u16 b, unsigned long port);
+extern void		outl(u32 b, unsigned long port);
+
+extern u8		readb(const volatile void __iomem *addr);
+extern u16		readw(const volatile void __iomem *addr);
+extern u32		readl(const volatile void __iomem *addr);
+extern u64		readq(const volatile void __iomem *addr);
+extern void		writeb(u8 b, volatile void __iomem *addr);
+extern void		writew(u16 b, volatile void __iomem *addr);
+extern void		writel(u32 b, volatile void __iomem *addr);
+extern void		writeq(u64 b, volatile void __iomem *addr);
+
+extern u8		__raw_readb(const volatile void __iomem *addr);
+extern u16		__raw_readw(const volatile void __iomem *addr);
+extern u32		__raw_readl(const volatile void __iomem *addr);
+extern u64		__raw_readq(const volatile void __iomem *addr);
+extern void		__raw_writeb(u8 b, volatile void __iomem *addr);
+extern void		__raw_writew(u16 b, volatile void __iomem *addr);
+extern void		__raw_writel(u32 b, volatile void __iomem *addr);
+extern void		__raw_writeq(u64 b, volatile void __iomem *addr);
+
+/*
+ * Mapping from port numbers to __iomem space is pretty easy.
+ */
+
+/* These two have to be extern inline because of the extern prototype from
+   <asm-generic/iomap.h>.  It is not legal to mix "extern" and "static" for
+   the same declaration.  */
+extern inline void __iomem *ioport_map(unsigned long port, unsigned int size)
+{
+	return IO_CONCAT(__IO_PREFIX,ioportmap) (port);
+}
+
+extern inline void ioport_unmap(void __iomem *addr)
+{
+}
+
+static inline void __iomem *ioremap(unsigned long port, unsigned long size)
+{
+	return IO_CONCAT(__IO_PREFIX,ioremap) (port, size);
+}
+
+static inline void __iomem *__ioremap(unsigned long port, unsigned long size,
+				      unsigned long flags)
+{
+	return ioremap(port, size);
+}
+
+static inline void __iomem * ioremap_nocache(unsigned long offset,
+	

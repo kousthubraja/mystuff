@@ -1,0 +1,112 @@
+package org.sourceforge.droidstick;
+
+import java.io.DataInputStream;
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+import org.apache.http.HttpConnection;
+
+import android.app.Activity;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.os.Bundle;
+import android.widget.EditText;
+import android.widget.ImageView;
+
+
+
+public class DroidStick extends Activity{ //SensorEventListener {
+
+	EditText t1;
+	EditText t2;
+	EditText t3;
+	ImageView image1;
+	
+	LocationListener list=new LocationListener() {
+		
+		@Override
+		public void onStatusChanged(String provider, int status, Bundle extras) {
+			// TODO Auto-generated method stub
+			t3.setText("GPS status changed");
+		}
+		
+		@Override
+		public void onProviderEnabled(String provider) {
+			// TODO Auto-generated method stub
+			t3.setText(provider+" - Enabled");
+		}
+		
+		@Override
+		public void onProviderDisabled(String provider) {
+			// TODO Auto-generated method stub
+			t3.setText(provider+" - Disabled");
+		}
+		
+		@Override
+		public void onLocationChanged(Location location) {
+			// TODO Auto-generated method stub
+			String lat = String.valueOf(location.getLatitude());
+			String lon = String.valueOf(location.getLongitude());
+			t1.setText(lat);
+			t2.setText(lon);
+			t3.setText("Co-ordinates aquired");
+			
+			HttpURLConnection con=null;
+			try
+			{
+				URL url=new URL("http://server880.comxa.com/friend_finder.php?lat=44&lon=56");
+				con=(HttpURLConnection)url.openConnection();
+				con.connect();
+				
+			}
+			catch(Exception e){t1.setText("error");}
+			
+		}
+	};
+	
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_droid_stick);
+		t1=(EditText)findViewById(R.id.editText1);
+		t2 = (EditText)findViewById(R.id.editText2);
+		t3 = (EditText)findViewById(R.id.editText3);
+		image1=(ImageView)findViewById(R.id.imageView1);
+		LocationManager lm=(LocationManager)getSystemService(Context.LOCATION_SERVICE);
+		t2.setText("Started new");
+		loadImage("http://csab.in/Images/csab2013.png");
+		lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, list);
+	}
+
+	public void loadImage(String address)  {
+		t1.setText("li");
+		try{
+			final URL url=new URL(address);
+			new Thread(new Runnable(){
+				public void run(){
+					try
+					{
+					Bitmap bmp=BitmapFactory.decodeStream(url.openConnection().getInputStream());
+					image1.setImageBitmap(bmp);
+					t1.setText("ImageLoaded");
+					}
+					catch(Exception e){t1.setText("error li");t2.setText(e.toString());}
+				}
+			});
+		}
+		catch(Exception e){t2.setText(e.toString());}
+			
+			
+			
+			
+		
+		
+	}
+}
+

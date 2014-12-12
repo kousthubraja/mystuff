@@ -1,0 +1,17 @@
+ </packing>
+                                        </child>
+                                        <child>
+                                          <object class="GtkAlignment" id="alignment18">
+                                            <property name="visible">True</property>
+                                            <property name="can_focus">False</property>
+                                            <property name="left_padding">12</property>
+                                            <child>
+                                              <object class="GtkBox" id="vbox52">
+                                                <property name="visible">True</property>
+                                                <property name="can_focus">False</property>
+                                                <property name="spacing">6</property>
+                                                <property name="orientation">vertical</property>
+                                                <child>
+                                                  <object class="GtkTable" id="table4">
+                                                    <property name="visible">True</property>
+                                          

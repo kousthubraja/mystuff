@@ -1,0 +1,39 @@
+CIA_HAE_IO(m)	(MCPCIA_CSR(m) + 0x440)
+#define _MCPCIA_IACK_SC(m)	(MCPCIA_CSR(m) + 0x480)
+#define MCPCIA_HAE_DENSE(m)	(MCPCIA_CSR(m) + 0x4C0)
+
+/*
+ * Interrupt Control registers
+ */
+#define MCPCIA_INT_CTL(m)	(MCPCIA_CSR(m) + 0x500)
+#define MCPCIA_INT_REQ(m)	(MCPCIA_CSR(m) + 0x540)
+#define MCPCIA_INT_TARG(m)	(MCPCIA_CSR(m) + 0x580)
+#define MCPCIA_INT_ADR(m)	(MCPCIA_CSR(m) + 0x5C0)
+#define MCPCIA_INT_ADR_EXT(m)	(MCPCIA_CSR(m) + 0x600)
+#define MCPCIA_INT_MASK0(m)	(MCPCIA_CSR(m) + 0x640)
+#define MCPCIA_INT_MASK1(m)	(MCPCIA_CSR(m) + 0x680)
+#define MCPCIA_INT_ACK0(m)	(MCPCIA_CSR(m) + 0x10003f00)
+#define MCPCIA_INT_ACK1(m)	(MCPCIA_CSR(m) + 0x10003f40)
+
+/*
+ * Performance Monitor registers
+ */
+#define MCPCIA_PERF_MON(m)	(MCPCIA_CSR(m) + 0x300)
+#define MCPCIA_PERF_CONT(m)	(MCPCIA_CSR(m) + 0x340)
+
+/*
+ * Diagnostic Registers
+ */
+#define MCPCIA_CAP_DIAG(m)	(MCPCIA_CSR(m) + 0x700)
+#define MCPCIA_TOP_OF_MEM(m)	(MCPCIA_CSR(m) + 0x7C0)
+
+/*
+ * Error registers
+ */
+#define MCPCIA_MC_ERR0(m)	(MCPCIA_CSR(m) + 0x800)
+#define MCPCIA_MC_ERR1(m)	(MCPCIA_CSR(m) + 0x840)
+#define MCPCIA_CAP_ERR(m)	(MCPCIA_CSR(m) + 0x880)
+#define MCPCIA_PCI_ERR1(m)	(MCPCIA_CSR(m) + 0x1040)
+#define MCPCIA_MDPA_STAT(m)	(MCPCIA_CSR(m) + 0x4000)
+#define MCPCIA_MDPA_SYN(m)	(MCPCIA_CSR(m) + 0x4040)
+#define MCPCIA_MDPA_DIAG(m)	(MCPCIA_CSR(m) +

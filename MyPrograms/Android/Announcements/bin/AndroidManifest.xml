@@ -1,0 +1,14 @@
+          <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkTable" id="cursor_table">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="n_columns">4</property>
+                                <child>
+                                  <object class="GtkLabel" id="cursor_speed_label">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="xalign">0</property>
+                                    <property name="label" translatable="yes">S_p

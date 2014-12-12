@@ -1,0 +1,62 @@
+ inline unsigned long
+pmd_page_vaddr(pmd_t pmd)
+{
+	return ((pmd_val(pmd) & _PFN_MASK) >> (32-PAGE_SHIFT)) + PAGE_OFFSET;
+}
+
+#ifndef CONFIG_DISCONTIGMEM
+#define pmd_page(pmd)	(mem_map + ((pmd_val(pmd) & _PFN_MASK) >> 32))
+#define pgd_page(pgd)	(mem_map + ((pgd_val(pgd) & _PFN_MASK) >> 32))
+#endif
+
+extern inline unsigned long pgd_page_vaddr(pgd_t pgd)
+{ return PAGE_OFFSET + ((pgd_val(pgd) & _PFN_MASK) >> (32-PAGE_SHIFT)); }
+
+extern inline int pte_none(pte_t pte)		{ return !pte_val(pte); }
+extern inline int pte_present(pte_t pte)	{ return pte_val(pte) & _PAGE_VALID; }
+extern inline void pte_clear(struct mm_struct *mm, unsigned long addr, pte_t *ptep)
+{
+	pte_val(*ptep) = 0;
+}
+
+extern inline int pmd_none(pmd_t pmd)		{ return !pmd_val(pmd); }
+extern inline int pmd_bad(pmd_t pmd)		{ return (pmd_val(pmd) & ~_PFN_MASK) != _PAGE_TABLE; }
+extern inline int pmd_present(pmd_t pmd)	{ return pmd_val(pmd) & _PAGE_VALID; }
+extern inline void pmd_clear(pmd_t * pmdp)	{ pmd_val(*pmdp) = 0; }
+
+extern inline int pgd_none(pgd_t pgd)		{ return !pgd_val(pgd); }
+extern inline int pgd_bad(pgd_t pgd)		{ return (pgd_val(pgd) & ~_PFN_MASK) != _PAGE_TABLE; }
+extern inline int pgd_present(pgd_t pgd)	{ return pgd_val(pgd) & _PAGE_VALID; }
+extern inline void pgd_clear(pgd_t * pgdp)	{ pgd_val(*pgdp) = 0; }
+
+/*
+ * The following only work if pte_present() is true.
+ * Undefined behaviour if not..
+ */
+extern inline int pte_write(pte_t pte)		{ return !(pte_val(pte) & _PAGE_FOW); }
+extern inline int pte_dirty(pte_t pte)		{ return pte_val(pte) & _PAGE_DIRTY; }
+extern inline int pte_young(pte_t pte)		{ return pte_val(pte) & _PAGE_ACCESSED; }
+extern inline int pte_file(pte_t pte)		{ return pte_val(pte) & _PAGE_FILE; }
+extern inline int pte_special(pte_t pte)	{ return 0; }
+
+extern inline pte_t pte_wrprotect(pte_t pte)	{ pte_val(pte) |= _PAGE_FOW; return pte; }
+extern inline pte_t pte_mkclean(pte_t pte)	{ pte_val(pte) &= ~(__DIRTY_BITS); return pte; }
+extern inline pte_t pte_mkold(pte_t pte)	{ pte_val(pte) &= ~(__ACCESS_BITS); return pte; }
+extern inline pte_t pte_mkwrite(pte_t pte)	{ pte_val(pte) &= ~_PAGE_FOW; return pte; }
+extern inline pte_t pte_mkdirty(pte_t pte)	{ pte_val(pte) |= __DIRTY_BITS; return pte; }
+extern inline pte_t pte_mkyoung(pte_t pte)	{ pte_val(pte) |= __ACCESS_BITS; return pte; }
+extern inline pte_t pte_mkspecial(pte_t pte)	{ return pte; }
+
+#define PAGE_DIR_OFFSET(tsk,address) pgd_offset((tsk),(address))
+
+/* to find an entry in a kernel page-table-directory */
+#define pgd_offset_k(address) pgd_offset(&init_mm, (address))
+
+/* to find an entry in a page-table-directory. */
+#define pgd_index(address)	(((address) >> PGDIR_SHIFT) & (PTRS_PER_PGD-1))
+#define pgd_offset(mm, address)	((mm)->pgd+pgd_index(address))
+
+/*
+ * The smp_read_barrier_depends() in the following functions are required to
+ * order the load of *dir (the pointer in the top level page table) with any
+ * subsequent load of the returned pmd_t *ret (ret is dat
